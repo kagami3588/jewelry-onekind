@@ -5,7 +5,7 @@
   var CFG = window.KAGAMI_CONFIG || {};
   var ID = (CFG.GA4_ID || "").trim();
   var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-  var mobile = window.matchMedia("(max-width:760px)").matches;
+  var mobile = window.matchMedia("(max-width:960px)").matches;
   var hasIO = "IntersectionObserver" in window;
   var $ = function (s) { return Array.prototype.slice.call(document.querySelectorAll(s)); };
   var clamp = function (v) { return v < 0 ? 0 : v > 1 ? 1 : v; };
@@ -149,12 +149,16 @@
   var box = document.getElementById("reportImages"), imgs = CFG.REPORT_IMAGES || [];
   if (box && imgs.length) {
     box.innerHTML = "";
-    imgs.forEach(function (it) {
+    imgs.forEach(function (it, i) {
+      var f = document.createElement("figure");
+      if (i === 0) f.className = "f";
       var im = document.createElement("img");
       im.src = it.src; im.alt = it.alt || "鑑定書"; im.loading = "lazy"; im.decoding = "async";
       if (it.w) im.width = it.w;
       if (it.h) im.height = it.h;
-      box.appendChild(im);
+      f.appendChild(im);
+      if (it.caption) { var c = document.createElement("figcaption"); c.textContent = it.caption; f.appendChild(c); }
+      box.appendChild(f);
     });
   }
 
