@@ -162,6 +162,13 @@
     });
   }
 
+  /* ================= スマホのメニュー：リンクを押す／Escで閉じる ================= */
+  var menu = document.querySelector(".menu");
+  if (menu) {
+    menu.addEventListener("click", function (e) { if (e.target.closest && e.target.closest(".panel a")) menu.removeAttribute("open"); });
+    document.addEventListener("keydown", function (e) { if (e.key === "Escape") menu.removeAttribute("open"); });
+  }
+
   /* ================= YouTube：クリックしたときだけ読み込む ================= */
   $(".yt").forEach(function (box) {
     var btn = box.querySelector(".frame"), id = box.getAttribute("data-yt");

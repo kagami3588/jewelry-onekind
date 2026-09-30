@@ -1,7 +1,11 @@
 # KAGAMI 第2LP（kagami/second）
 
+## ページ構成（すべて同じデザイン・同じフォルダ）
+`index.html`（トップLP）／`kantei.html`（鑑定について）／`story.html`（林竜輔）／`sanmeigaku.html`（算命学とは）／`voices.html`（お客様の声）／`tokushoho.html`（特商法）／`privacy.html`（プライバシー）。
+特商法・プライバシーの本文は、既存サイトの原文をそのまま移しています。スマホはMENUボタンで全ページへ移動できます。
+
 ## 公開するとき
-- `index.html` の先頭付近にある **`<meta name="robots" content="noindex">` を1行削除**（直前に ★ 付きのコメントがあります）。
+- **全7ページ**の `<head>` にある **`<meta name="robots" content="noindex">` を1行ずつ削除**（直前に ★ 付きのコメントがあります）。
 - 正式版にする場合は、`canonical` と `og:url` のURLが公開先と合っているか確認。
 
 ## 素材の入れ方（設定は `index.html` 下部の `KAGAMI_CONFIG`）

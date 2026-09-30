@@ -35,9 +35,10 @@ ul,ol{list-style:none}
 .logo{display:flex;align-items:baseline;gap:10px;text-decoration:none}
 .logo span{font-family:var(--mincho);font-size:26px;letter-spacing:.06em}
 .logo em{font-style:normal;font-size:10px;letter-spacing:.32em;color:var(--gold)}
-.hd nav{display:none}
-.hd nav a{font-size:13px;letter-spacing:.12em;margin-left:28px;text-decoration:none;color:var(--gray)}
-.hd nav a:hover{color:var(--ink)}
+.dnav{display:none}
+.dnav a{font-size:13px;letter-spacing:.12em;margin-left:28px;text-decoration:none;color:var(--gray)}
+.dnav a:hover,.dnav a[aria-current]{color:var(--ink)}
+.dnav a[aria-current]{border-bottom:1px solid var(--gold);padding-bottom:3px}
 .btn{display:flex;align-items:center;justify-content:center;width:100%;max-width:380px;min-height:60px;padding:0 28px;background:var(--navy);color:#fff;font-family:var(--mincho);font-weight:600;font-size:18px;letter-spacing:.16em;text-decoration:none;border-radius:2px;transition:background .3s,transform .3s var(--ease)}
 .btn:hover{background:#1A3550}
 .btn:active{transform:scale(.985)}
@@ -248,7 +249,8 @@ details a,.faq .more a{border-bottom:1px solid var(--gold);text-decoration:none}
 @media (min-width:961px){
   body{font-size:17px}
   .hd{padding:26px 44px}
-  .hd nav{display:block}
+  .dnav{display:block}
+  .menu{display:none}
   .hero{padding:110px 6vw 60px;align-items:center}
   .hero-in{max-width:1240px;display:grid;grid-template-columns:minmax(0,5fr) minmax(0,6fr);grid-template-areas:"eye stage" "h1 stage" "sub stage" "cta stage";column-gap:5vw;align-content:center}
   .eyebrow{grid-area:eye;align-self:end}
@@ -284,4 +286,74 @@ details a,.faq .more a{border-bottom:1px solid var(--gold);text-decoration:none}
   .hero-for{margin:0 0 14px;font-size:12.5px}
   .spec{margin-bottom:12px}
   .spec li{padding:6px 4px 5px}
+}
+
+/* ---------- スマホのメニュー（JSなしでも開閉できる） ---------- */
+.menu summary{position:fixed;right:14px;top:12px;z-index:40;list-style:none;cursor:pointer;font-family:var(--mincho);font-size:11px;letter-spacing:.22em;color:var(--ink);background:rgba(246,243,236,.94);border:1px solid var(--rule);padding:9px 14px;border-radius:30px;min-height:40px;display:flex;align-items:center}
+.menu summary::-webkit-details-marker{display:none}
+.menu .c{display:none}
+.menu[open] .o{display:none}
+.menu[open] .c{display:inline}
+.menu .panel{position:fixed;inset:0;z-index:30;background:var(--paper);padding:88px 32px 32px;display:flex;flex-direction:column;gap:2px;overflow:auto}
+.menu .panel a{font-family:var(--mincho);font-size:22px;letter-spacing:.08em;text-decoration:none;padding:16px 0;border-bottom:1px solid var(--rule)}
+.menu .panel a.go{margin-top:24px;border:0;background:var(--navy);color:#fff;text-align:center;font-size:17px;padding:18px 0;letter-spacing:.14em}
+
+/* ---------- サブページ共通 ---------- */
+.sub .hd{position:absolute}
+.phead{padding:clamp(108px,22vw,170px) 0 clamp(36px,8vw,64px)}
+.phead h1{font-family:var(--mincho);font-weight:500;font-size:clamp(26px,7.4vw,46px);line-height:1.6;letter-spacing:.04em}
+.psub{margin:22px 0 0;color:var(--gray);font-size:15px;line-height:2}
+.sp{padding:clamp(56px,12vw,96px) 0}
+.sp.alt{background:var(--white)}
+.sp.report{background:var(--navy2);color:#ECE8DF}
+.sp.report .h{color:#fff}
+.sp .h{margin-bottom:1em!important}
+.sp p{margin-bottom:1.5em}
+.prose .lead{color:var(--navy);border-left:2px solid var(--gold);padding-left:18px;margin:2em 0}
+.pad-t{padding-top:clamp(48px,10vw,80px)}
+.bigfig{max-width:1000px;margin:0 auto 44px;padding:0}
+.bigfig img{width:100%;height:auto}
+.story.sec{padding-top:0}
+.career{margin:64px 0 0;border-left:1px solid var(--gold);padding-left:24px}
+.career li{position:relative;padding-bottom:28px}
+.career li::before{content:"";position:absolute;left:-29px;top:12px;width:9px;height:9px;border-radius:50%;background:var(--gold)}
+.career h3{font-family:var(--mincho);font-weight:500;font-size:18px;line-height:1.7}
+.career p{font-size:14.5px;line-height:1.9;color:var(--gray);margin:0!important}
+.sp-spec{border-top:1px solid var(--rule);margin-bottom:8px}
+.sp-spec>div{display:grid;grid-template-columns:84px 1fr;gap:12px;padding:16px 0;border-bottom:1px solid var(--rule)}
+.sp-spec dt{font-size:13px;letter-spacing:.1em;color:var(--gold);padding-top:3px}
+.sp-spec dd{font-size:15.5px;line-height:1.9}
+.sp-spec b{font-family:var(--mincho);font-size:22px;font-weight:600}
+.sp-spec small{color:var(--gray);font-size:13px}
+.apply5{border-top:1px solid var(--rule)}
+.apply5 li{display:grid;grid-template-columns:48px 1fr;gap:12px;padding:20px 0;border-bottom:1px solid var(--rule)}
+.apply5 em{font-style:normal;font-family:var(--mincho);font-size:24px;color:var(--gold);line-height:1.4}
+.apply5 h3{font-family:var(--mincho);font-weight:500;font-size:18px;line-height:1.7}
+.apply5 p{font-size:14.5px;line-height:1.9;color:var(--gray);margin:0!important}
+.bizp{margin:0 0 28px}
+.bizp img{width:100%;height:auto}
+.bullets{margin:0 0 1.2em;border-top:1px solid var(--rule)}
+.bullets li{padding:12px 0;border-bottom:1px solid var(--rule);font-size:15px}
+.btn.line{background:var(--white);color:var(--navy);border:1px solid var(--navy)}
+.btn.line:hover{background:var(--paper2)}
+.nextsec{padding:clamp(48px,10vw,80px) 0}
+.nextl h3{font-family:var(--mincho);font-weight:500;font-size:14px;letter-spacing:.24em;color:var(--gold);margin-bottom:12px}
+.nextl ul{border-top:1px solid var(--rule)}
+.nextl a{display:block;text-decoration:none;padding:18px 28px 18px 0;border-bottom:1px solid var(--rule);position:relative}
+.nextl a::after{content:"→";position:absolute;right:4px;top:50%;transform:translateY(-50%);color:var(--gold)}
+.nextl b{display:block;font-family:var(--mincho);font-weight:500;font-size:17px}
+.nextl small{display:block;font-size:13px;color:var(--gray);line-height:1.7}
+.ldl>dt{font-family:var(--mincho);font-size:16px;line-height:1.7;margin-top:28px;padding-top:22px;border-top:1px solid var(--rule)}
+.ldl>dt:first-child{margin-top:0}
+.ldl>dd{font-size:14.5px;line-height:2.05;color:#3A434D;margin-top:6px;word-break:break-word}
+.ldl a{border-bottom:1px solid var(--gold);text-decoration:none}
+.legal .back{margin-top:56px;font-size:14px}
+.legal .back a{border-bottom:1px solid var(--gold);text-decoration:none}
+.stamp{margin-top:40px;font-size:13px;color:var(--gray)}
+.sub .voices{background:var(--paper)}
+.fline{margin-bottom:16px;font-size:13px}
+.ft .fline a{border-bottom:1px solid rgba(255,255,255,.3);padding-bottom:2px}
+@media (min-width:961px){
+  .phead .wrap{max-width:760px}
+  .phead h1{font-size:clamp(34px,3.2vw,48px)}
 }
