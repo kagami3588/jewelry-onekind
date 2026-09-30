@@ -1,0 +1,197 @@
+/* 鑑 -KAGAMI-｜LP スタイル（モバイルファースト）
+   配色：白・墨・ネイビー・ゴールド。星・紫・装飾は使わない。 */
+:root{
+  --paper:#FBFAF7; --paper2:#F3F1EB; --navy:#0B1B2B; --navy2:#13283D;
+  --sumi:#151515; --gold:#B08D57; --gold-l:#D8BC8A; --gray:#5F6873; --rule:#E4E1DA;
+  --mincho:"Noto Serif JP","Yu Mincho","YuMincho","Hiragino Mincho ProN",serif;
+  --gothic:"Noto Sans JP","Hiragino Kaku Gothic ProN","Yu Gothic",sans-serif;
+  --ease:cubic-bezier(.19,1,.22,1);
+  --sec:clamp(88px,18vw,150px);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{background:var(--paper);color:var(--sumi);font-family:var(--gothic);font-weight:400;
+  font-size:16px;line-height:2.05;letter-spacing:.04em;overflow-x:hidden}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit}
+ul,ol{list-style:none}
+.skip{position:absolute;left:-999px;top:0;background:var(--navy);color:#fff;padding:8px 14px;z-index:99}
+.skip:focus{left:0}
+:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+
+/* ---------- レイアウト ---------- */
+.wrap{max-width:640px;margin:0 auto;padding:0 24px}
+.sec{padding:var(--sec) 0}
+.sec p{margin-bottom:1.6em}
+.sec p:last-child{margin-bottom:0}
+.dark{background:var(--navy);color:#EFEBE2}
+.label{font-family:var(--mincho);font-size:13px;letter-spacing:.3em;color:var(--gold);line-height:1.6;margin-bottom:20px!important}
+.h{font-family:var(--mincho);font-weight:500;font-size:clamp(25px,6.6vw,38px);line-height:1.7;letter-spacing:.05em;margin-bottom:1.4em!important}
+.h-long{font-size:clamp(21px,5.7vw,34px)}
+.lead{font-family:var(--mincho);font-size:clamp(18px,4.6vw,22px);line-height:2;letter-spacing:.05em}
+.more a{color:var(--navy);border-bottom:1px solid var(--gold);padding-bottom:2px;text-decoration:none}
+.dark .more a{color:var(--gold-l)}
+
+/* ---------- ヘッダー ---------- */
+.hd{position:absolute;top:0;left:0;right:0;z-index:5;display:flex;justify-content:space-between;align-items:center;padding:18px 20px}
+.logo{font-family:var(--mincho);font-size:24px;color:#fff;text-decoration:none;letter-spacing:.08em;display:flex;align-items:baseline;gap:10px}
+.logo em{font-style:normal;font-family:var(--gothic);font-size:10px;letter-spacing:.3em;color:var(--gold-l)}
+.hnav{display:none}
+.hnav a{color:#fff;text-decoration:none;font-size:13px;letter-spacing:.12em;margin-left:28px;opacity:.85}
+.hnav a:hover{opacity:1}
+
+/* ---------- ボタン ---------- */
+.btn{display:flex;align-items:center;justify-content:center;width:100%;max-width:360px;min-height:60px;padding:0 28px;
+  background:var(--gold);color:#fff;font-family:var(--mincho);font-weight:600;font-size:18px;letter-spacing:.14em;text-decoration:none;
+  border-radius:2px;transition:background .3s,transform .3s var(--ease)}
+.btn:hover{background:#9B7A48}
+.btn:active{transform:scale(.985)}
+.cta{margin-top:48px}
+.micro{font-size:13px;color:var(--gray);margin-top:14px!important;letter-spacing:.06em}
+.dark .micro{color:#AEB6BF}
+
+/* ---------- 01 HERO ---------- */
+.hero{position:relative;min-height:100svh;display:flex;align-items:flex-end;background:var(--navy);overflow:hidden;color:#fff}
+.hero-media{position:absolute;inset:0}
+.hero-img,.hero-media video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 28%}
+.hero-media video{opacity:0;transition:opacity 1.2s ease}
+.hero-media video.on{opacity:1}
+.hero-shade{position:absolute;inset:0;background:linear-gradient(180deg,rgba(11,27,43,.55) 0%,rgba(11,27,43,.12) 26%,rgba(11,27,43,.78) 58%,rgba(11,27,43,.97) 100%)}
+.hero-copy{position:relative;width:100%;max-width:640px;margin:0 auto;padding:0 24px 44px}
+.eyebrow{font-family:var(--mincho);font-size:13px;letter-spacing:.26em;color:var(--gold-l);margin-bottom:18px}
+.hero h1{font-family:var(--mincho);font-weight:600;font-size:clamp(22px,6.3vw,40px);line-height:1.6;letter-spacing:.04em}
+.hero h1 span{display:block;white-space:nowrap}
+.hero h1 .em{color:var(--gold-l);font-size:1.08em}
+.hero-sub{margin:20px 0 28px;font-size:clamp(14px,3.9vw,17px);line-height:1.95;color:#E6E2D9}
+.hero .btn{max-width:none}
+.price-line{margin:14px 0 0!important;text-align:center;font-size:15px;letter-spacing:.1em;color:#E6E2D9}
+.price-line b{font-family:var(--mincho);font-size:17px;font-weight:600;color:#fff}
+.price-line i{font-style:normal;color:var(--gold-l);margin:0 .4em}
+
+/* ---------- 02 17.4% ---------- */
+.stat{background:var(--paper);text-align:center;padding-bottom:calc(var(--sec) * .9)}
+.kicker{font-family:var(--mincho);font-size:15px;letter-spacing:.3em;color:var(--gold)}
+.q{font-family:var(--mincho);font-weight:500;font-size:clamp(25px,7vw,40px);line-height:1.75;margin:10px 0 40px}
+.num{font-family:var(--mincho);font-weight:500;color:var(--navy);line-height:1;margin:0 0 28px!important;display:flex;justify-content:center;align-items:baseline}
+.num .n{font-size:clamp(96px,30vw,190px);letter-spacing:-.02em;font-variant-numeric:tabular-nums}
+.num .pc{font-size:clamp(40px,11vw,72px);color:var(--gold);margin-left:.06em}
+.stat-lead{font-family:var(--mincho);font-size:clamp(17px,4.6vw,21px);line-height:2}
+.stat-src{font-size:13px;color:var(--gray);line-height:1.9;margin-top:22px}
+
+/* ---------- 03 KAGAMIとは ---------- */
+.kagami{background:var(--paper2)}
+.know{margin:36px 0}
+.know li{display:flex;align-items:baseline;gap:18px;padding:20px 0;border-top:1px solid var(--rule);font-family:var(--mincho);font-size:clamp(18px,4.8vw,22px);line-height:1.7}
+.know li:last-child{border-bottom:1px solid var(--rule)}
+.know em{font-style:normal;font-family:var(--mincho);font-size:13px;letter-spacing:.2em;color:var(--gold)}
+
+/* ---------- 04 料金 ---------- */
+.price-no{font-family:var(--mincho);font-size:clamp(20px,5.4vw,26px);color:var(--gold-l);margin-top:-.4em}
+.buy{margin:40px 0 44px;border-top:1px solid rgba(255,255,255,.16)}
+.buy li{display:grid;grid-template-columns:76px 1fr;gap:16px;padding:22px 0;border-bottom:1px solid rgba(255,255,255,.16)}
+.buy em{font-style:normal;font-family:var(--mincho);font-size:19px;font-weight:600;color:var(--gold-l);line-height:1.6}
+.buy h3{font-family:var(--mincho);font-weight:500;font-size:17px;line-height:1.7;margin-bottom:4px}
+.buy p{font-size:14px;line-height:1.9;color:#BFC6CE;margin:0!important}
+.total{font-family:var(--mincho);text-align:center;font-size:18px;margin-bottom:.4em!important}
+.total span{font-size:clamp(40px,12vw,60px);font-weight:600;color:#fff;letter-spacing:.02em}
+.total-note{text-align:center;font-size:13px;color:#AEB6BF;line-height:1.9}
+.price .cta{display:flex;flex-direction:column;align-items:center;margin-top:36px}
+
+/* ---------- 05 算命学 ---------- */
+.sanmei .h{font-size:clamp(25px,6.8vw,38px)}
+
+/* ---------- 06 林竜輔 ---------- */
+.story{background:var(--paper2)}
+.story-photo{margin:12px 0 48px;max-width:1000px;margin-left:auto;margin-right:auto}
+.story-photo img{width:100%;aspect-ratio:3/2;object-fit:cover;object-position:60% 35%}
+.facts{display:grid;gap:28px;margin-top:48px;padding-top:40px;border-top:1px solid var(--rule)}
+.facts li{display:flex;align-items:center;gap:20px;font-size:14px;line-height:1.9;color:var(--gray)}
+.facts b{font-family:var(--mincho);font-weight:500;font-size:40px;color:var(--navy);line-height:1;white-space:nowrap}
+.facts small{font-size:15px;margin-left:2px}
+.story .more{margin-top:44px}
+.facts .anan img{width:92px;box-shadow:0 6px 18px rgba(0,0,0,.14)}
+
+/* ---------- 07 90分 ---------- */
+.steps{margin:40px 0 32px}
+.steps li{display:grid;grid-template-columns:52px 1fr;gap:10px;padding:26px 0;border-top:1px solid var(--rule)}
+.steps li:last-child{border-bottom:1px solid var(--rule)}
+.steps em{font-style:normal;font-family:var(--mincho);font-size:26px;color:var(--gold);line-height:1.4}
+.steps h3{font-family:var(--mincho);font-weight:500;font-size:clamp(18px,4.8vw,21px);line-height:1.7;margin-bottom:6px}
+.steps p{font-size:15px;line-height:1.95;color:var(--gray);margin:0!important}
+.flow-apply{font-size:13px;color:var(--gray);line-height:2;text-align:center}
+.flow .cta{display:flex;flex-direction:column;align-items:center}
+
+/* ---------- 08 鑑定書 ---------- */
+.report{background:var(--navy2);color:#EFEBE2}
+.report .h{color:#fff}
+.report-images{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:14px;margin:36px 0}
+.report-images img{width:100%;box-shadow:0 10px 30px rgba(0,0,0,.35);border-radius:2px}
+
+/* ---------- 09 お客様の声 ---------- */
+.voice{margin-top:40px;padding:28px 24px;background:#fff;border:1px solid var(--rule);border-left:3px solid var(--gold)}
+.voice figcaption{font-size:13px;color:var(--gray);letter-spacing:.08em;margin-bottom:12px}
+.voice blockquote p{font-size:15px;line-height:2;margin-bottom:1em}
+.voice blockquote .pick{font-family:var(--mincho);font-size:clamp(18px,4.8vw,21px);color:var(--navy);line-height:1.8;margin:1.1em 0 0}
+.voices .more{margin-top:40px}
+
+/* ---------- 10 FAQ ---------- */
+.faq{background:var(--paper2)}
+details{border-top:1px solid var(--rule)}
+details:last-of-type{border-bottom:1px solid var(--rule)}
+summary{list-style:none;cursor:pointer;padding:20px 40px 20px 0;position:relative;font-family:var(--mincho);font-size:clamp(16px,4.3vw,18px);line-height:1.8}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"＋";position:absolute;right:2px;top:20px;color:var(--gold);font-family:var(--gothic)}
+details[open] summary::after{content:"－"}
+details>div{padding:0 0 22px}
+details p{font-size:15px;line-height:2;color:#3E454D;margin:0!important}
+details a,.faq .more a{color:var(--navy)}
+.faq>.wrap>.more{margin-top:36px;font-size:14px;color:var(--gray)}
+
+/* ---------- 11 FINAL ---------- */
+.final{text-align:center;padding:calc(var(--sec) * 1.1) 0}
+.final-h{font-family:var(--mincho);font-weight:500;font-size:clamp(25px,7vw,40px);line-height:1.7;margin-bottom:.6em}
+.final-price{font-family:var(--mincho);font-size:18px}
+.final-price span{font-size:clamp(36px,10vw,52px);font-weight:600;color:#fff}
+.final .cta{display:flex;flex-direction:column;align-items:center;margin-top:36px}
+.sub-link{margin-top:28px!important;font-size:14px}
+.sub-link a{color:var(--gold-l);text-decoration:none;border-bottom:1px solid rgba(216,188,138,.5);padding-bottom:2px}
+
+/* ---------- フッター ---------- */
+.ft{background:#07121D;color:#9AA3AD;padding:48px 24px 40px;text-align:center;font-size:13px}
+.ft .fl{font-family:var(--mincho);color:#E6E2D9;margin-bottom:18px}
+.ft nav{display:flex;flex-wrap:wrap;justify-content:center;gap:8px 20px;margin-bottom:22px}
+.ft a{text-decoration:none}
+.ft a:hover{color:#fff}
+
+/* ---------- アニメーション（JSが動くときだけ。内容は常に読める） ---------- */
+.js .rv{opacity:0;transform:translateY(18px);transition:opacity .9s var(--ease),transform .9s var(--ease)}
+.js .rv.in{opacity:1;transform:none}
+.js .hero-img{animation:settle 2.4s var(--ease) both}
+@keyframes settle{from{transform:scale(1.05)}to{transform:none}}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .js .rv{opacity:1;transform:none;transition:none}
+  .js .hero-img{animation:none}
+}
+
+/* ---------- 音の切り替え（動画があるときだけ） ---------- */
+.snd{position:absolute;right:16px;top:70px;z-index:4;background:rgba(11,27,43,.6);color:#fff;border:1px solid rgba(255,255,255,.4);
+  font:inherit;font-size:12px;letter-spacing:.1em;padding:7px 12px;border-radius:30px;cursor:pointer}
+
+/* ---------- PC ---------- */
+@media (min-width:701px){
+  body{font-size:17px}
+  .hd{padding:26px 44px}
+  .hnav{display:block}
+  .hero-media{left:30%}
+  .hero-img,.hero-media video{object-position:50% 25%}
+  .hero-shade{background:linear-gradient(90deg,rgba(11,27,43,1) 0%,rgba(11,27,43,1) 30%,rgba(11,27,43,.55) 52%,rgba(11,27,43,.05) 100%),linear-gradient(0deg,rgba(11,27,43,.6),rgba(11,27,43,0) 40%)}
+  .hero{align-items:center}
+  .hero-copy{max-width:none;margin:0;padding:120px 0 80px 7vw;width:58%}
+  .hero h1{font-size:clamp(30px,3.2vw,48px)}
+  .hero .btn{max-width:360px}
+  .price-line{text-align:left}
+  .wrap{max-width:720px}
+  .buy li{grid-template-columns:100px 1fr}
+  .snd{top:auto;bottom:28px;right:32px}
+}
