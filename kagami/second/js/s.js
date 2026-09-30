@@ -162,6 +162,20 @@
     });
   }
 
+  /* ================= YouTube：クリックしたときだけ読み込む ================= */
+  $(".yt").forEach(function (box) {
+    var btn = box.querySelector(".frame"), id = box.getAttribute("data-yt");
+    btn.addEventListener("click", function () {
+      var f = document.createElement("iframe");
+      f.src = "https://www.youtube-nocookie.com/embed/" + id + "?autoplay=1&rel=0&modestbranding=1&playsinline=1";
+      f.title = box.getAttribute("data-yt-title") || "動画";
+      f.allow = "autoplay; encrypted-media; picture-in-picture; fullscreen";
+      f.allowFullscreen = true;
+      btn.innerHTML = ""; btn.appendChild(f); btn.style.cursor = "default";
+      track("video_play", { video: "youtube_" + id }, "yt" + id);
+    }, { once: true });
+  });
+
   /* ================= HERO動画（設定があるときだけ） =================
      表示が終わってから読み込むので、最初の表示は遅くなりません。
      省データ通信・動きを減らす設定の端末では、写真のままにします。 */

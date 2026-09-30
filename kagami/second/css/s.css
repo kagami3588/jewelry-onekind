@@ -187,6 +187,19 @@ ul,ol{list-style:none}
 .note{font-size:12.5px;color:var(--gray);margin-top:28px}
 .voices .more{margin-top:8px}
 
+/* ---------- YouTube（クリックするまで読み込まない） ---------- */
+.yt{margin:36px 0 0}
+.yt .frame{position:relative;display:block;width:100%;aspect-ratio:16/9;background:#0B1B2B;border:0;padding:0;cursor:pointer;overflow:hidden}
+.yt .frame img,.yt .frame iframe{position:absolute;inset:0;width:100%;height:100%;border:0;object-fit:cover}
+.yt .frame img.crop{transform:scale(1.34)}
+.yt .play{position:absolute;left:50%;top:50%;width:64px;height:64px;margin:-32px 0 0 -32px;border-radius:50%;background:rgba(251,250,247,.92);box-shadow:0 6px 20px rgba(0,0,0,.3);transition:transform .3s var(--ease)}
+.yt .play::before{content:"";position:absolute;left:26px;top:20px;border-left:18px solid #14202C;border-top:12px solid transparent;border-bottom:12px solid transparent}
+.yt .frame:hover .play{transform:scale(1.06)}
+.yt .cap{font-size:13px;color:var(--gray);line-height:1.8;margin:10px 0 0!important}
+.yt .cap b{display:block;font-weight:500;color:var(--ink);font-size:14px}
+.sanmei .yt{margin:40px 0}
+.voices .yt{margin:8px 0 8px}
+
 /* ---------- 10 FAQ ---------- */
 details{border-top:1px solid var(--rule)}
 details:last-of-type{border-bottom:1px solid var(--rule)}
