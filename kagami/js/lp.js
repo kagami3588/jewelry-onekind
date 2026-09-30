@@ -138,6 +138,7 @@
   var box = document.getElementById("reportImages");
   var imgs = CFG.REPORT_IMAGES || [];
   if (box && imgs.length) {
+    box.innerHTML = "";
     imgs.forEach(function (it) {
       var im = document.createElement("img");
       im.src = it.src; im.alt = it.alt || "鑑定書"; im.loading = "lazy"; im.decoding = "async";
@@ -145,7 +146,6 @@
       if (it.h) im.height = it.h;
       box.appendChild(im);
     });
-    box.hidden = false;
   }
 
   /* ---------- ファーストビューの動画（設定があるときだけ） ----------
@@ -155,6 +155,7 @@
   var conn = navigator.connection || {};
   if (vsrc && !reduce && !conn.saveData) {
     var startVideo = function () {
+      var slot = document.getElementById("videoSlot"); if (slot) slot.remove();
       var media = document.querySelector(".hero-media");
       var poster = media.querySelector("img");
       var v = document.createElement("video");

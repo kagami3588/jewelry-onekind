@@ -124,7 +124,7 @@ ul,ol{list-style:none}
 /* ---------- 08 鑑定書 ---------- */
 .report{background:var(--navy2);color:#EFEBE2}
 .report .h{color:#fff}
-.report-images{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:14px;margin:36px 0}
+.report-images{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:36px 0}
 .report-images img{width:100%;box-shadow:0 10px 30px rgba(0,0,0,.35);border-radius:2px}
 
 /* ---------- 09 お客様の声 ---------- */
@@ -195,3 +195,8 @@ details a,.faq .more a{color:var(--navy)}
   .buy li{grid-template-columns:100px 1fr}
   .snd{top:auto;bottom:28px;right:32px}
 }
+
+/* ---------- 画像・動画の枠（素材が入るまでの仮置き） ---------- */
+.report-images .slot{aspect-ratio:1/1.414;border:1px dashed rgba(216,188,138,.6);background:rgba(255,255,255,.04);display:flex;align-items:center;justify-content:center;text-align:center;color:var(--gold-l);font-family:var(--mincho);font-size:14px;line-height:1.8;letter-spacing:.12em}
+.slot-video{position:absolute;right:16px;top:70px;z-index:3;border:1px dashed rgba(216,188,138,.7);color:var(--gold-l);background:rgba(11,27,43,.55);font-size:12px;letter-spacing:.16em;padding:7px 14px}
+@media (min-width:701px){.slot-video{top:auto;bottom:28px;right:32px}}

@@ -47,7 +47,8 @@
   <div class="hero-media">
     <img class="hero-img" src="img/hero.jpg" srcset="img/hero-sm.jpg 720w, img/hero.jpg 1200w" sizes="100vw"
          alt="受講者に向かって話す林竜輔" width="1200" height="800" fetchpriority="high" decoding="async">
-    <!-- 動画は js/ 設定（HERO_VIDEO）に URL を入れたときだけ、表示後に読み込まれます -->
+    <!-- 動画枠：HERO_VIDEO に動画を入れると、この写真が動画のposterになり、枠は消えます -->
+    <span class="slot-video" id="videoSlot">動画　準備中</span>
   </div>
   <div class="hero-shade" aria-hidden="true"></div>
   <div class="hero-copy">
@@ -172,7 +173,12 @@
     <h2 class="h rv">90分のあとに、<br>手元に残るもの。</h2>
     <p class="rv">鑑定でお伝えした内容は、PDFの鑑定書にまとめてお渡しします。</p>
     <p class="rv">生まれ持った宿命は、一生変わりません。迷ったときや、環境を変えたいとき、何かを選ぶときに、もう一度読み返せるように残しておきます。</p>
-    <div id="reportImages" class="report-images" hidden></div>
+    <div id="reportImages" class="report-images">
+      <!-- 画像が未設定のときの枠。REPORT_IMAGES に画像を入れると自動で置き換わります -->
+      <div class="slot"><span>鑑定書<br>表紙</span></div>
+      <div class="slot"><span>鑑定書<br>ページの一部</span></div>
+      <div class="slot"><span>鑑定書<br>内容の一部</span></div>
+    </div>
     <p class="rv">鑑定のあとに疑問が出てきたときは、公式LINEから質問できます。</p>
   </div>
 </section>
