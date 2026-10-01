@@ -198,11 +198,13 @@ p{margin:0}
 .st-text .acc{margin-top:16px}
 .st-text .acc-in p{font-size:14.5px;max-width:30em}
 .st-text .acc-in .lead{font-family:var(--serif);font-size:clamp(17px,4.6vw,22px);line-height:1.9;color:var(--ink)}
-.facts{display:flex;flex-wrap:wrap;gap:22px 34px;margin-top:5vh;padding-top:22px;border-top:1px solid var(--rule)}
-.facts li{display:flex;align-items:center;gap:14px;font-size:12px;line-height:1.8;color:var(--mute)}
-.facts b{font-family:var(--latin);font-weight:300;font-size:clamp(52px,15vw,100px);line-height:.8;color:var(--ink);letter-spacing:-.02em;white-space:nowrap}
-.facts small{font-family:var(--serif);font-size:.22em;letter-spacing:.1em;margin-left:.3em}
-.facts .mag img{width:58px;box-shadow:0 6px 16px rgba(0,0,0,.18)}
+.facts{display:grid;gap:7vh;margin-top:7vh;padding-top:28px;border-top:1px solid var(--rule)}
+.facts li{font-size:13px;line-height:1.9;color:var(--mute)}
+.facts .num b{display:flex;align-items:baseline;font-family:var(--latin);font-weight:300;font-size:clamp(96px,32vw,300px);line-height:.8;color:var(--ink);letter-spacing:-.02em;white-space:nowrap}
+.facts .num small{font-family:var(--serif);font-size:.17em;letter-spacing:.12em;margin-left:.5em;color:var(--ink)}
+.facts .num span{display:block;margin-top:16px}
+.facts .mag img{width:clamp(200px,68vw,420px);box-shadow:0 16px 36px rgba(0,0,0,.22)}
+.facts .mag span{display:block;margin-top:16px}
 .st-text .acc-in .more{margin-top:22px}
 
 /* ================= 05 90分 ================= */
@@ -324,6 +326,8 @@ details a{border-bottom:1px solid var(--brass);text-decoration:none}
   .rc-total b{font-size:clamp(88px,12vw,180px)}
   .st-cols{grid-template-columns:5fr 6fr;gap:6vw;align-items:start}
   .portrait{order:2}
+  .facts{grid-template-columns:1fr 1fr;align-items:end;gap:6vw}
+  .facts .mag img{width:clamp(220px,22vw,360px)}
   .portrait img{aspect-ratio:4/5}
   .st-text{order:1}
   .fl-grid{display:grid;grid-template-columns:5fr 6fr;column-gap:9vw;align-items:start}
