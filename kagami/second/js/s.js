@@ -162,6 +162,20 @@
     });
   }
 
+  /* ================= アコーディオン：HTMLに本文を残したまま、表示だけ切り替える ================= */
+  $(".acc-btn").forEach(function (btn) {
+    var panel = document.getElementById(btn.getAttribute("aria-controls"));
+    if (!panel) return;
+    var label = btn.querySelector(".t"), oL = btn.getAttribute("data-open"), cL = btn.getAttribute("data-close");
+    btn.addEventListener("click", function () {
+      var open = btn.getAttribute("aria-expanded") !== "true";
+      btn.setAttribute("aria-expanded", open ? "true" : "false");
+      panel.classList.toggle("open", open);
+      if (label && oL) label.textContent = open ? cL : oL;
+      if (open) track("accordion_open", { label: ((oL || (label && label.textContent) || btn.textContent) + "").trim().slice(0, 40), section: (btn.closest("[data-section]") || document.body).getAttribute("data-section") || "" });
+    });
+  });
+
   /* ================= スマホのメニュー：リンクを押す／Escで閉じる ================= */
   var menu = document.querySelector(".menu");
   if (menu) {
