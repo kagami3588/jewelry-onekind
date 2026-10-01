@@ -27,10 +27,11 @@
 <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;500;600&family=Noto+Sans+JP:wght@400;500&family=Cormorant+Garamond:wght@300;400&display=swap"></noscript>
 <script>document.documentElement.className='js';</script>
 
+
 </head>
 <body class="art">
 <div id="bar" aria-hidden="true"></div>
-<a href="#kagami" class="skip">本文へ移動</a>
+<a href="#price" class="skip">本文へ移動</a>
 
 <header class="hd">
   <a href="./" class="logo" aria-label="鑑 KAGAMI トップ"><span>鑑</span><em>KAGAMI</em></a>
@@ -76,42 +77,20 @@
   <div class="cue" aria-hidden="true"><i></i></div>
 </section>
 
-<!-- 02 17.4% -->
+<!-- 02 17.4%：数字だけ。説明は開いた人にだけ -->
 <section id="stat" class="stat" data-section="stat_17_4">
-  <p class="kicker r">質問です。</p>
-  <h2 class="q r">あなたは、自分のことを<br>理解していますか？</h2>
+  <p class="kicker r">質問です。<span>あなたは、自分のことを理解していますか？</span></p>
   <div class="meter" id="meter">
-    <p class="big" aria-label="17.4パーセント" data-x="-5"><span id="n174">17.4</span><small>%</small></p>
+    <p class="big" aria-label="17.4パーセント"><span id="n174">17.4</span><small>%</small></p>
     <div class="line" role="img" aria-label="全体を100とすると17.4"><i class="fill"></i></div>
     <p class="scale"><span>0</span><span>100</span></p>
   </div>
-  <div class="stat-txt">
-    <p class="stat-lead r">「自分のことを理解できている」と<br>明確に答えた人は、17.4%でした。</p>
-    <p class="r">自分のことは、意外と自分では分からない。<br>そう感じている人は、少なくないのかもしれません。</p>
-    <p class="cite r">出典：株式会社ジコリカイ調査（2025年8月、20〜50代の働く男女500名）<br><a href="https://prtimes.jp/main/html/rd/p/000000022.000074189.html" target="_blank" rel="noopener">PR TIMES の発表ページ</a></p>
-  </div>
+  <p class="stat-lead r">「自分のことを理解できている」と<br>明確に答えた人。</p>
+  <p class="cite r">出典：株式会社ジコリカイ調査（2025年8月、20〜50代の働く男女500名）　<a href="https://prtimes.jp/main/html/rd/p/000000022.000074189.html" target="_blank" rel="noopener">PR TIMES</a></p>
+  <div class="r"><div class="acc " data-acc><button type="button" class="acc-btn" aria-expanded="false" aria-controls="acc-stat" data-open="調査について詳しく見る" data-close="閉じる"><span class="t">調査について詳しく見る</span><span class="ic" aria-hidden="true"></span></button><div class="acc-panel" id="acc-stat"><div class="acc-in"><p>「自分のことを理解できている」と明確に答えた人は、17.4%でした。</p><p>自分のことは、意外と自分では分からない。そう感じている人は、少なくないのかもしれません。</p></div></div></div></div>
 </section>
 
-<!-- 03 KAGAMIとは：大きな言葉＋短い説明 -->
-<section id="kagami" class="kagami" data-section="kagami">
-  <p class="label r">KAGAMIとは</p>
-  <h2 class="mega r"><span class="ln"><i>自分のことを</i></span><span class="ln"><i>知る、90分。</i></span></h2>
-  <div class="k-body">
-    <p class="r">KAGAMIは、算命学を使った個人鑑定です。生年月日をもとに、あなたがどんな人なのか、何を大切にする人なのか、どんな環境で力を発揮しやすいのかを、話しながら一緒に見ていきます。</p>
-    <p class="r lead">未来を言い当てることは、しません。</p>
-    <div class="r"><div class="acc " data-acc><button type="button" class="acc-btn" aria-expanded="false" aria-controls="acc-kagami" data-open="KAGAMIについて詳しく読む" data-close="閉じる"><span class="t">KAGAMIについて詳しく読む</span><span class="ic" aria-hidden="true"></span></button><div class="acc-panel" id="acc-kagami"><div class="acc-in">
-        <p>見ていくのは、たとえば次のようなことです。</p>
-        <dl class="know">
-          <div><dt>どんな人なのか</dt><dd>自分では普通だと思っていた強みや、考え方のクセ。</dd></div>
-          <div><dt>何を大切にする人なのか</dt><dd>迷ったときに、何を基準にすればいいのか。</dd></div>
-          <div><dt>どんな環境で力を発揮しやすいのか</dt><dd>合いやすい人、仕事、場所。</dd></div>
-          <div><dt>なぜ今の環境で違和感があるのか</dt><dd>その違和感が、自分の性質とどうつながっているのか。</dd></div>
-        </dl>
-        <p>自分のことが分かったうえで、これから何を選ぶのかは、あなたが決めます。</p></div></div></div></div>
-  </div>
-</section>
-
-<!-- 04 3万円で何を買うのか：エディトリアルな明細 -->
+<!-- 03 3万円で何を買うのか（KAGAMIとは・算命学とを統合） -->
 <section id="price" class="price" data-section="price">
   <p class="label r">料金</p>
   <h2 class="mega r"><span class="ln"><i>3万円で、</i></span><span class="ln"><i>何を買うのか。</i></span></h2>
@@ -121,7 +100,7 @@
     <p class="rc-head"><span>KAGAMI 個人鑑定</span><span>含まれるもの</span></p>
     <ul>
         <li data-acc style="--d:0">
-          <button type="button" class="acc-btn row" aria-expanded="false" aria-controls="rc0"><span class="nm">90分の個別鑑定（オンライン）</span><span class="val">オンライン</span><span class="ic" aria-hidden="true"></span></button>
+          <button type="button" class="acc-btn row" aria-expanded="false" aria-controls="rc0"><span class="nm">90分の個別鑑定</span><span class="val">オンライン</span><span class="ic" aria-hidden="true"></span></button>
           <div class="acc-panel" id="rc0"><div class="acc-in"><p>Zoomで、林竜輔と1対1で話します。時間は90分です。</p></div></div>
         </li>
         <li data-acc style="--d:1">
@@ -129,59 +108,35 @@
           <div class="acc-panel" id="rc1"><div class="acc-in"><p>一方的に聞くだけの時間ではありません。あなたの仕事や人間関係の話を伺いながら進めます。90分は、すべて林竜輔本人が担当します。</p></div></div>
         </li>
         <li data-acc style="--d:2">
-          <button type="button" class="acc-btn row" aria-expanded="false" aria-controls="rc2"><span class="nm">自分の宿命について</span><span class="val">生年月日から</span><span class="ic" aria-hidden="true"></span></button>
-          <div class="acc-panel" id="rc2"><div class="acc-in"><p>生年月日と性別から、生まれ持った傾向を確認します。</p></div></div>
+          <button type="button" class="acc-btn row" aria-expanded="false" aria-controls="rc2"><span class="nm">自分の宿命を知る時間</span><span class="val">宿命・性質・環境</span><span class="ic" aria-hidden="true"></span></button>
+          <div class="acc-panel" id="rc2"><div class="acc-in"><p>生年月日と性別から、生まれ持った傾向を確認します。</p><p>考え方や行動のクセ、自分では当たり前だと思っている強みなどを、具体的にお伝えします。</p><p>どんな人・仕事・環境だと力を発揮しやすいのかを、お話しします。</p></div></div>
         </li>
         <li data-acc style="--d:3">
-          <button type="button" class="acc-btn row" aria-expanded="false" aria-controls="rc3"><span class="nm">自分の性質について</span><span class="val">考え方・強み</span><span class="ic" aria-hidden="true"></span></button>
-          <div class="acc-panel" id="rc3"><div class="acc-in"><p>考え方や行動のクセ、自分では当たり前だと思っている強みなどを、具体的にお伝えします。</p></div></div>
-        </li>
-        <li data-acc style="--d:4">
-          <button type="button" class="acc-btn row" aria-expanded="false" aria-controls="rc4"><span class="nm">自分に合いやすい環境について</span><span class="val">人・仕事・場所</span><span class="ic" aria-hidden="true"></span></button>
-          <div class="acc-panel" id="rc4"><div class="acc-in"><p>どんな人・仕事・環境だと力を発揮しやすいのかを、お話しします。</p></div></div>
-        </li>
-        <li data-acc style="--d:5">
-          <button type="button" class="acc-btn row" aria-expanded="false" aria-controls="rc5"><span class="nm">鑑定書（PDF）</span><span class="val">何度でも</span><span class="ic" aria-hidden="true"></span></button>
-          <div class="acc-panel" id="rc5"><div class="acc-in"><p>鑑定でお話しした内容をまとめたPDFを、鑑定後にお渡しします。迷ったとき、環境を変えたいとき、何かを選ぶときに、何度でも読み返せます。</p></div></div>
-        </li>
-        <li data-acc style="--d:6">
-          <button type="button" class="acc-btn row" aria-expanded="false" aria-controls="rc6"><span class="nm">鑑定後の質問（公式LINE）</span><span class="val">できます</span><span class="ic" aria-hidden="true"></span></button>
-          <div class="acc-panel" id="rc6"><div class="acc-in"><p>鑑定のあとに疑問が出てきたときは、公式LINEから質問できます。</p></div></div>
+          <button type="button" class="acc-btn row" aria-expanded="false" aria-controls="rc3"><span class="nm">鑑定書（PDF）</span><span class="val">何度でも</span><span class="ic" aria-hidden="true"></span></button>
+          <div class="acc-panel" id="rc3"><div class="acc-in"><p>鑑定でお話しした内容は、「一生変わらないあなたの宿命」として、PDFの鑑定書にまとめてお渡しします。</p><p>鑑定でお話しした内容をまとめたPDFを、鑑定後にお渡しします。迷ったとき、環境を変えたいとき、何かを選ぶときに、何度でも読み返せます。</p><p>鑑定のあとに疑問が出てきたときは、公式LINEから質問できます。</p><div id="reportImages" class="rp-thumbs"></div></div></div>
         </li>
     </ul>
-    <p class="rc-hint">各項目をタップすると、説明が開きます。</p>
-    <div class="rc-total" data-x="4"><span>合計</span><b>30,000</b><small>円（税込）</small></div>
+    <div class="rc-total"><span>合計</span><b>30,000</b><small>円（税込）</small></div>
   </div>
 
-  <div class="p-after">
-    <p class="p-state r">買えるのは、答えではありません。<br>自分のことを知った状態です。</p>
-    <div class="keep r">
-      <div><small>90分のあいだ</small><p>自分の宿命、自分の性質、自分に合いやすい環境について、林竜輔と話しながら知っていく。</p></div>
-      <div><small>そのあとも手元に</small><p>鑑定の内容をまとめた鑑定書（PDF）。迷ったときに、何度でも読み返せる。</p></div>
-    </div>
-    <p class="p-lead r">これから何を選ぶのかを、自分で考えるために、自分のことを知る。</p>
-    <p class="need r">必要な情報は、氏名・性別・生年月日だけ。出生地・出生時刻は不要です。<br>お支払いは銀行振込（事前）。鑑定のあとに、継続契約や高額な商品をご案内することはありません。</p>
-    <div class="cta r">
-      <a class="btn" href="https://form.run/@shukumeikantei" target="_blank" rel="noopener" data-cta="自分の宿命を知る" data-cta-loc="price"><span>自分の宿命を知る</span><i aria-hidden="true"></i></a>
-      <p class="micro">フォーム入力 → 振込先のご案内 → お振込み → LINEで日程調整</p>
-    </div>
-  </div>
-</section>
+  <p class="value r">自分のことを知る90分です。</p>
 
-<!-- 05 算命学とは：写真＋大きなタイポグラフィ -->
-<section id="sanmeigaku" class="sanmei" data-section="sanmeigaku">
-  <div class="sm-photo" aria-hidden="true">
-    <picture><source type="image/webp" srcset="img/lecture.webp"><img src="img/lecture.jpg" alt="" width="1200" height="800" loading="lazy" decoding="async"></picture>
+  <div class="mini r" data-section="kagami" id="kagami">
+    <p class="mini-t">KAGAMIは、算命学を使った個人鑑定です。</p>
+    <div class="acc " data-acc><button type="button" class="acc-btn" aria-expanded="false" aria-controls="acc-kagami" data-open="KAGAMIについて詳しく読む" data-close="閉じる"><span class="t">KAGAMIについて詳しく読む</span><span class="ic" aria-hidden="true"></span></button><div class="acc-panel" id="acc-kagami"><div class="acc-in"><p>生年月日をもとに、あなたがどんな人なのか、何を大切にする人なのか、どんな環境で力を発揮しやすいのかを、話しながら一緒に見ていきます。</p><p>未来を言い当てることは、しません。</p>
+        <p>見ていくのは、たとえば次のようなことです。</p>
+        <dl class="know">
+          <div><dt>どんな人なのか</dt><dd>自分では普通だと思っていた強みや、考え方のクセ。</dd></div>
+          <div><dt>何を大切にする人なのか</dt><dd>迷ったときに、何を基準にすればいいのか。</dd></div>
+          <div><dt>どんな環境で力を発揮しやすいのか</dt><dd>合いやすい人、仕事、場所。</dd></div>
+          <div><dt>なぜ今の環境で違和感があるのか</dt><dd>その違和感が、自分の性質とどうつながっているのか。</dd></div>
+        </dl>
+        <p>自分のことが分かったうえで、これから何を選ぶのかは、あなたが決めます。</p><p class="k-end">これから何を選ぶのかを、自分で考えるために、自分のことを知る。</p></div></div></div>
   </div>
-  <div class="sm-fg">
-    <div class="sm-top"><p class="label r">算命学とは</p>
-    <h2 class="sm-h r">生年月日から、<br>生まれ持った傾向を見る学問。</h2></div>
-    <div class="sm-a" data-x="-9"><small>よくあるイメージ</small><p class="old">未来を当てる占い</p></div>
-    <div class="sm-b" data-x="9"><small>KAGAMIでの使い方</small><p class="new">自分のことを<br>知る材料</p></div>
-  </div>
-</section>
-<div class="sm-more">
-  <div class="r"><div class="acc " data-acc><button type="button" class="acc-btn" aria-expanded="false" aria-controls="acc-sanmei" data-open="算命学について詳しく見る" data-close="閉じる"><span class="t">算命学について詳しく見る</span><span class="ic" aria-hidden="true"></span></button><div class="acc-panel" id="acc-sanmei"><div class="acc-in">
+  <div class="mini r" data-section="sanmeigaku" id="sanmeigaku">
+    <p class="mini-t">生年月日から、自分の性質や傾向を知る。</p>
+    <p class="swap2"><s>未来を当てる占い</s><b>→</b>自分のことを知る材料</p>
+    <div class="acc " data-acc><button type="button" class="acc-btn" aria-expanded="false" aria-controls="acc-sanmei" data-open="算命学について詳しく見る" data-close="閉じる"><span class="t">算命学について詳しく見る</span><span class="ic" aria-hidden="true"></span></button><div class="acc-panel" id="acc-sanmei"><div class="acc-in">
         <p>算命学では、その傾向のことを「宿命」と呼びます。走ることで伸びる人もいれば、立ち止まることで深まる人もいる。どちらが良い、悪いではなく、違いがあるだけです。</p>
         <p>KAGAMIでは、それを未来を当てるためではなく、自分のことを知るために使っています。</p>
         <div class="yt" data-yt="z5rwWASzCSs" data-yt-title="算命学とは？　まるッとわかる算命学">
@@ -189,129 +144,98 @@
       <p class="cap"><b>算命学とは？　まるッとわかる算命学</b>言葉だけでは伝わりにくい部分を、映像でお話ししています。</p>
     </div>
 
-        <p class="more"><a href="sanmeigaku.html" data-cta="算命学のページを読む" data-cta-loc="sanmeigaku">算命学のページを読む →</a></p></div></div></div></div>
-</div>
+        <p class="more"><a href="sanmeigaku.html" data-cta="算命学のページを読む" data-cta-loc="sanmeigaku">算命学のページを読む →</a></p></div></div></div>
+  </div>
 
-<!-- 06 林竜輔：一人の人間の人生を覗く -->
+  <p class="need r">必要な情報は、氏名・性別・生年月日だけ。出生地・出生時刻は不要です。<br>お支払いは銀行振込（事前）。鑑定のあとに、継続契約や高額な商品をご案内することはありません。</p>
+  <div class="cta r">
+    <a class="btn" href="https://form.run/@shukumeikantei" target="_blank" rel="noopener" data-cta="自分の宿命を知る" data-cta-loc="price"><span>自分の宿命を知る</span><i aria-hidden="true"></i></a>
+    <p class="micro">フォーム入力 → 振込先のご案内 → お振込み → LINEで日程調整</p>
+  </div>
+</section>
+
+<!-- 04 林竜輔のストーリー -->
 <section id="story" class="story" data-section="story">
-  <div class="bp pxl" aria-hidden="true"><img src="img/blueprint.jpg" alt="" width="1000" height="500" loading="lazy" decoding="async"></div>
+  <div class="bp" aria-hidden="true"><img src="img/blueprint.jpg" alt="" width="1000" height="500" loading="lazy" decoding="async"></div>
   <div class="st-in">
     <p class="label r">林 竜輔</p>
     <h2 class="ed r"><span class="ln"><i>ロケットをつくっていた私が、</i></span><span class="ln"><i>なぜ算命学をしているのか。</i></span></h2>
     <div class="st-cols">
-      <figure class="portrait r rev">
-        <div class="pxl"><picture><source type="image/webp" srcset="img/hero-1200.webp"><img src="img/hero.jpg" alt="受講者に向かって話す林竜輔" width="1200" height="800" loading="lazy" decoding="async"></picture></div>
-        <figcaption>林 竜輔　算命学鑑定士</figcaption>
+      <figure class="portrait r">
+        <picture><source type="image/webp" srcset="img/hero-1200.webp"><img src="img/hero.jpg" alt="受講者に向かって話す林竜輔" width="1200" height="800" loading="lazy" decoding="async"></picture>
       </figure>
       <div class="st-text">
-        <p class="r first">三菱重工業の宇宙事業で、ロケットをつくっていました。現場採用で入って、H-IIAの液体ロケットエンジンの製造、月面探査機SLIMの開発・製造、H3の液体ロケットエンジンの開発・製造に携わり、その後は生産技術の仕事をしていました。</p>
-        <div class="r"><div class="acc " data-acc><button type="button" class="acc-btn" aria-expanded="false" aria-controls="acc-story" data-open="ストーリーを読む" data-close="閉じる"><span class="t">ストーリーを読む</span><span class="ic" aria-hidden="true"></span></button><div class="acc-panel" id="acc-story"><div class="acc-in">
+        <ul class="st-pts r">
+          <li>三菱重工業の宇宙事業で、ロケットをつくっていた。</li>
+          <li>H-IIA・H3の液体ロケットエンジン、月面探査機SLIM。</li>
+          <li>現在は、人と直接関わる仕事をしている。</li>
+        </ul>
+        <div class="r"><div class="acc " data-acc><button type="button" class="acc-btn" aria-expanded="false" aria-controls="acc-story" data-open="続きを読む" data-close="閉じる"><span class="t">続きを読む</span><span class="ic" aria-hidden="true"></span></button><div class="acc-panel" id="acc-story"><div class="acc-in"><p>三菱重工業の宇宙事業で、ロケットをつくっていました。現場採用で入って、H-IIAの液体ロケットエンジンの製造、月面探査機SLIMの開発・製造、H3の液体ロケットエンジンの開発・製造に携わり、その後は生産技術の仕事をしていました。</p>
         <p>ものをつくる仕事は好きでした。ただ、同じ環境にいても、自信を持って進める人と、立ち止まってしまう人がいる。その違いが何なのか、人のことを知りたいと思うようになりました。友人との別れも重なり、人と直接関わる仕事に移りました。</p>
         <p>その違いを考えるなかで出会ったのが、算命学です。学んで、実際に人を鑑定するうちに、人にはそれぞれ生まれ持った違いがあること、そしてそれを知ると、自分の選び方を見直せることが分かってきました。</p>
-        <p class="lead">算命学は、当てるためのものではない。自分を知るためのものだと思っています。だから私は、算命学をしています。</p></div></div></div></div>
+        <p class="lead">算命学は、当てるためのものではない。自分を知るためのものだと思っています。だから私は、算命学をしています。</p><p class="more"><a href="story.html" data-cta="林竜輔のストーリーを読む" data-cta-loc="story">林竜輔のストーリーを読む　→</a></p></div></div></div></div>
       </div>
     </div>
     <ul class="facts r">
         <li><b>1,000<small>名以上</small></b><span>これまでに鑑定した方の数<br>経営者・個人事業主・管理職など</span></li>
         <li class="mag"><picture><source type="image/webp" srcset="img/anan.webp"><img src="img/anan.jpg" alt="林竜輔が掲載された雑誌anan" width="480" height="619" loading="lazy" decoding="async"></picture><span>雑誌『anan』に掲載<br>（2025年12月）</span></li>
       </ul>
-    <p class="r more"><a href="story.html" data-cta="林竜輔のストーリーを読む" data-cta-loc="story">林竜輔のストーリーを読む　→</a></p>
   </div>
 </section>
 
-<!-- 07 90分：縦の一本線が、時間の流れ -->
+<!-- 05 90分で何をするのか -->
 <section id="flow" class="flow" data-section="flow_90min">
   <div class="fl-grid">
     <div class="fl-h">
       <p class="label r">90分の流れ</p>
-      <h2 class="mega m2 r"><span class="ln"><i>90分で、</i></span><span class="ln"><i>何をするのか。</i></span></h2>
+      <h2 class="mega m3 r"><span class="ln"><i>90分で、</i></span><span class="ln"><i>何をするのか。</i></span></h2>
       <p class="r fl-intro">Zoomで、林竜輔と1対1で話します。悩みがまとまっていなくても大丈夫です。</p>
-      <p class="hint r">各ステップをタップすると、説明が開きます。</p>
     </div>
     <ol class="steps" id="steps">
-      <li class="edge"><em>0分</em><div><p>鑑定スタート（Zoom・1対1）</p></div></li>
-      <li data-acc><em>01</em><div><h3 class="st"><button type="button" class="acc-btn step" aria-expanded="false" aria-controls="st1"><span class="t">生年月日から、宿命を確認する</span><span class="ic" aria-hidden="true"></span></button></h3><div class="acc-panel" id="st1"><div class="acc-in"><p>氏名・性別・生年月日をもとに、生まれ持った傾向を確認します。</p></div></div></div></li>
-      <li data-acc><em>02</em><div><h3 class="st"><button type="button" class="acc-btn step" aria-expanded="false" aria-controls="st2"><span class="t">自分の性質を見る</span><span class="ic" aria-hidden="true"></span></button></h3><div class="acc-panel" id="st2"><div class="acc-in"><p>あなたがどんな性質を持っているのかを、具体的にお伝えします。</p></div></div></div></li>
-      <li data-acc><em>03</em><div><h3 class="st"><button type="button" class="acc-btn step" aria-expanded="false" aria-controls="st3"><span class="t">今の状況と照らし合わせる</span><span class="ic" aria-hidden="true"></span></button></h3><div class="acc-panel" id="st3"><div class="acc-in"><p>仕事、人間関係、環境など、今の悩みや状況を伺いながら重ねていきます。一方的に聞くだけの時間ではありません。</p></div></div></div></li>
-      <li data-acc><em>04</em><div><h3 class="st"><button type="button" class="acc-btn step" aria-expanded="false" aria-controls="st4"><span class="t">話しながら、自分について理解を深める</span><span class="ic" aria-hidden="true"></span></button></h3><div class="acc-panel" id="st4"><div class="acc-in"><p>これから何を選ぶのかを考える材料を、一緒に整理します。</p></div></div></div></li>
-      <li class="edge"><em>90分</em><div><p>鑑定おわり</p></div></li>
-      <li class="after"><em>05</em><div><span class="tag">鑑定後</span><h3 class="st plain">鑑定書を受け取る</h3><p>鑑定の内容をまとめたPDFの鑑定書を、あとからお渡しします。</p></div></li>
+      <li data-acc><em>01</em><div><h3 class="st"><button type="button" class="acc-btn step" aria-expanded="false" aria-controls="st1"><span class="t">自分のことを話す</span><span class="ic" aria-hidden="true"></span></button></h3><div class="acc-panel" id="st1"><div class="acc-in"><p>まず、算命学をどう見ているかを簡単にお伝えします。そのうえで、今のあなたのこと（仕事、人間関係、気になっていること）を伺います。悩みがまとまっていなくても構いません。</p></div></div></div></li>
+      <li data-acc><em>02</em><div><h3 class="st"><button type="button" class="acc-btn step" aria-expanded="false" aria-controls="st2"><span class="t">宿命を見る</span><span class="ic" aria-hidden="true"></span></button></h3><div class="acc-panel" id="st2"><div class="acc-in"><p>氏名・性別・生年月日をもとに、生まれ持った傾向を確認します。</p></div></div></div></li>
+      <li data-acc><em>03</em><div><h3 class="st"><button type="button" class="acc-btn step" aria-expanded="false" aria-controls="st3"><span class="t">自分の性質を知る</span><span class="ic" aria-hidden="true"></span></button></h3><div class="acc-panel" id="st3"><div class="acc-in"><p>あなたがどんな性質を持っているのかを、具体的にお伝えします。</p></div></div></div></li>
+      <li data-acc><em>04</em><div><h3 class="st"><button type="button" class="acc-btn step" aria-expanded="false" aria-controls="st4"><span class="t">今の自分と照らし合わせる</span><span class="ic" aria-hidden="true"></span></button></h3><div class="acc-panel" id="st4"><div class="acc-in"><p>仕事、人間関係、環境など、今の状況と照らし合わせます。一方的に聞くだけの時間ではありません。</p></div></div></div></li>
+      <li data-acc><em>05</em><div><h3 class="st"><button type="button" class="acc-btn step" aria-expanded="false" aria-controls="st5"><span class="t">これからを考える</span><span class="ic" aria-hidden="true"></span></button></h3><div class="acc-panel" id="st5"><div class="acc-in"><p>これから何を選ぶのかを考える材料を、一緒に整理します。鑑定の内容をまとめたPDFの鑑定書は、鑑定後にお渡しします。</p></div></div></div></li>
     </ol>
   </div>
-  <div class="fl-cta r">
-    <p class="apply">申し込み → お振込み → LINEで日程調整 → 90分の鑑定 → 鑑定書</p>
-    <a class="btn" href="https://form.run/@shukumeikantei" target="_blank" rel="noopener" data-cta="自分の宿命を知る" data-cta-loc="flow"><span>自分の宿命を知る</span><i aria-hidden="true"></i></a>
-    <p class="micro">オンライン90分／30,000円（税込）</p>
-  </div>
 </section>
 
-<!-- 08 鑑定書：実物を主役に -->
-<section id="report" class="report" data-section="report">
-  <div class="rp-head">
-    <p class="label r">鑑定書</p>
-    <h2 class="rp-h r"><span class="ln"><i>90分のあとに、</i></span><span class="ln"><i>手元に残るもの。</i></span></h2>
-  </div>
-  <div id="reportImages" class="rpt r">
-    <!-- 画像が未設定のときの枠。REPORT_IMAGES に画像（匿名化済み）を入れると、この枠が自動で置き換わります -->
-    <figure class="f"><div class="slot"><span>表紙</span><em>画像準備中</em></div><figcaption>表紙</figcaption></figure>
-    <figure><div class="slot"><span>中身</span><em>画像準備中</em></div><figcaption>中身</figcaption></figure>
-    <figure><div class="slot"><span>ページ構成</span><em>画像準備中</em></div><figcaption>ページ構成</figcaption></figure>
-  </div>
-  <div class="rp-text">
-    <p class="r">鑑定でお話しした内容は、「一生変わらないあなたの宿命」として、PDFの鑑定書にまとめてお渡しします。</p>
-    <p class="rp-when r">迷ったとき<b>／</b>環境を変えたいとき<b>／</b>何かを選ぶとき<br><span>そのたびに、読み返せます。</span></p>
-    <p class="rp-spec r">形式　PDF　　受け取り　鑑定後<br>鑑定のあとの質問は、公式LINEから。</p>
-  </div>
-</section>
-
-<!-- 09 お客様の声：インタビュー誌のように -->
+<!-- 06 お客様の声・FAQ・最後のCTA -->
 <section id="voices" class="voices" data-section="voices">
-  <div class="vo-head">
-    <p class="label r">お客様の声</p>
-    <h2 class="mega m2 r"><span class="ln"><i>受ける前と、</i></span><span class="ln"><i>受けたあと。</i></span></h2>
-    <p class="r vo-intro">経営者、個人事業主、管理職の方など、仕事や人間関係で立ち止まったときに受けにくる方が多くいらっしゃいます。</p>
-  </div>
-  <div class="vo-video"><div class="yt r" data-yt="GO0Uj0KrZ-s" data-yt-title="鑑定を受けた方が集まった会">
-      <button type="button" class="frame" aria-label="動画を再生：鑑定を受けた方が集まった会"><img src="https://i.ytimg.com/vi/GO0Uj0KrZ-s/maxresdefault.jpg" alt="" loading="lazy" decoding="async" width="1280" height="720" onerror="this.onerror=null;this.classList.add('crop');this.src='https://i.ytimg.com/vi/GO0Uj0KrZ-s/hqdefault.jpg'"><span class="play" aria-hidden="true"></span></button>
-      <p class="cap"><b>鑑定を受けた方が集まった会</b>当日の様子です。</p>
-    </div>
-</div>
-  <div class="vo-list">
-    <article class="vq v1 r" data-testimonial-id="s-40s">
+  <p class="label r">お客様の声</p>
+  <h2 class="mega m3 r"><span class="ln"><i>受ける前と、</i></span><span class="ln"><i>受けたあと。</i></span></h2>
+  <article class="vq v1 r" data-testimonial-id="s-40s">
       <blockquote class="quote">もっと早く知っていたかったです。</blockquote>
       <p class="who">40代・男性・経営者　Sさん</p>
       <dl class="vrows"><div><dt>鑑定前</dt><dd>数字は伸びていました。それでも、走り続けている理由が分からなくなっていた。</dd></div></dl><div class="acc" data-acc><button type="button" class="acc-btn" aria-expanded="false" aria-controls="vc1" data-open="続きを読む" data-close="閉じる"><span class="t">続きを読む</span><span class="ic" aria-hidden="true"></span></button><div class="acc-panel" id="vc1"><div class="acc-in"><dl class="vrows"><div><dt>鑑定で</dt><dd>林さんは、答えを教えてくれませんでした。私に必要な問いをいくつも投げかけて、忘れていた想いを引き出してくれました。</dd></div><div><dt>鑑定後</dt><dd>宿命を知ると、自分がうまくいっていた理由も明確になって、自分をもっと信じるきっかけになりました。</dd></div></dl></div></div></div>
     </article>
-    <article class="vq v2 r" data-testimonial-id="m-30s">
+  <p class="note r">※ 個人の感想です。効果を保証するものではありません。</p>
+  <div class="r vo-more"><div class="acc " data-acc><button type="button" class="acc-btn" aria-expanded="false" aria-controls="acc-voices" data-open="他のお客様の声を見る" data-close="閉じる"><span class="t">他のお客様の声を見る</span><span class="ic" aria-hidden="true"></span></button><div class="acc-panel" id="acc-voices"><div class="acc-in"><p class="vo-intro">経営者、個人事業主、管理職の方など、仕事や人間関係で立ち止まったときに受けにくる方が多くいらっしゃいます。</p><div class="yt" data-yt="GO0Uj0KrZ-s" data-yt-title="鑑定を受けた方が集まった会">
+      <button type="button" class="frame" aria-label="動画を再生：鑑定を受けた方が集まった会"><img src="https://i.ytimg.com/vi/GO0Uj0KrZ-s/maxresdefault.jpg" alt="" loading="lazy" decoding="async" width="1280" height="720" onerror="this.onerror=null;this.classList.add('crop');this.src='https://i.ytimg.com/vi/GO0Uj0KrZ-s/hqdefault.jpg'"><span class="play" aria-hidden="true"></span></button>
+      <p class="cap"><b>鑑定を受けた方が集まった会</b>当日の様子です。</p>
+    </div>
+<article class="vq v2" data-testimonial-id="m-30s">
       <blockquote class="quote">あの時に鑑定を依頼して、本当に良かったです。</blockquote>
       <p class="who">30代・女性・個人事業主　Mさん</p>
       <dl class="vrows"><div><dt>鑑定前</dt><dd>向いていないのかもしれない、と思っていました。周りと比べて、焦っていました。</dd></div></dl><div class="acc" data-acc><button type="button" class="acc-btn" aria-expanded="false" aria-controls="vc2" data-open="続きを読む" data-close="閉じる"><span class="t">続きを読む</span><span class="ic" aria-hidden="true"></span></button><div class="acc-panel" id="vc2"><div class="acc-in"><dl class="vrows"><div><dt>鑑定で</dt><dd>りゅうさんに「伸びるのが遅いだけです」と言われたとき、なぜか、涙が出ました。自分を知ることで、肩の荷を下ろせました。</dd></div><div><dt>鑑定後</dt><dd>自分を信じて続けることで今では、結果も出て、家族にも時間を使えるようになりました。</dd></div></dl></div></div></div>
-    </article>
-    <article class="vq v3 r" data-testimonial-id="k-40s">
+    </article><article class="vq v3" data-testimonial-id="k-40s">
       <blockquote class="quote">相性が悪いのではなく、判断の順番が違うだけ。</blockquote>
       <p class="who">40代・女性・管理職　Kさん</p>
       <dl class="vrows"><div><dt>鑑定前</dt><dd>部下との関係に、ずっと悩んでいました。</dd></div><div><dt>鑑定で</dt><dd>相性が悪いのではなく、判断の順番が違うだけ。</dd></div><div><dt>鑑定後</dt><dd>そう聞いてから、伝え方を変えました。三ヶ月後、その部下から相談されるようになりました。</dd></div></dl>
-    </article>
-  </div>
-  <div class="vo-foot">
-    <p class="note r">※ 個人の感想です。効果を保証するものではありません。</p>
-    <p class="r more"><a href="voices.html" data-cta="お客様の声をすべて見る" data-cta-loc="voices">お客様の声をすべて見る　→</a></p>
-  </div>
+    </article><p class="r more"><a href="voices.html" data-cta="お客様の声をすべて見る" data-cta-loc="voices">お客様の声をすべて見る　→</a></p></div></div></div></div>
 </section>
 
-<!-- 10 FAQ：最もシンプルに -->
 <section id="faq" class="faq" data-section="faq">
   <div class="fq-in">
     <p class="label r">よくある質問</p>
-    <h2 class="fq-h r">受ける前に、気になること。</h2>
-    <div class="r">
-      <details><summary>何を準備すればいいですか？</summary><div><p>氏名・性別・生年月日だけです。特別な準備はいりません。</p></div></details><details><summary>出生地や出生時間は必要ですか？</summary><div><p>必要ありません。分からなくても、そのまま受けていただけます。</p></div></details><details><summary>なぜ性別が必要なのですか？</summary><div><p>算命学では、性別が算出に関わるためです。</p></div></details><details><summary>90分で何をしますか？</summary><div><p>算命学をもとに、自分の性質や宿命について話しながら、自分のことを知っていく時間です。くわしくは<a href="#flow">90分の流れ</a>をご覧ください。</p></div></details><details><summary>鑑定書はもらえますか？</summary><div><p>はい。鑑定後に、「一生変わらないあなたの宿命」をまとめた鑑定書（PDF）をお渡しします。</p></div></details><details><summary>未来を予言してもらえますか？</summary><div><p>KAGAMIは、未来を当てることを目的としていません。自分のことを知り、これからの選択を考えるために算命学を使います。</p></div></details><details><summary>オンラインで受けられますか？</summary><div><p>はい。現在はすべてオンライン（Zoom）で行っています。</p></div></details><details><summary>悩みがまとまっていなくても大丈夫ですか？</summary><div><p>大丈夫です。話していくなかで、今のご状況を一緒に整理します。医療・法律・投資に関する助言は行っていません。</p></div></details><details><summary>先に振り込むのが不安です。</summary><div><p>お振込みから1ヶ月以内に当方からご連絡が取れない場合は、鑑定を実施せず、全額をご返金します。返金にかかる振込手数料も当方が負担します。</p></div></details><details><summary>キャンセルや日程変更はできますか？</summary><div><p>鑑定日の前日までにご連絡いただければ、日程変更についてご相談いただけます。日程確定後のお客様都合によるキャンセル・返金については、<a href="tokushoho.html">特定商取引法に基づく表記</a>をご確認ください。</p></div></details>
+    <div class="r fq-list">
+      <details><summary>どんな人に向いていますか？</summary><div><p>仕事、人間関係、これからの生き方など、今迷っていることがある方や、自分のことを知りたい方に受けていただいています。経営者・個人事業主・管理職の方が多くいらっしゃいます。悩みがまとまっていなくても大丈夫です。医療・法律・投資に関する助言は行っていません。</p></div></details><details><summary>オンラインでも受けられますか？</summary><div><p>はい。現在はすべてオンライン（Zoom）で行っています。</p></div></details><details><summary>鑑定書はいつもらえますか？</summary><div><p>鑑定後に、「一生変わらないあなたの宿命」をまとめた鑑定書（PDF）をお渡しします。</p></div></details><details><summary>申し込み後はどうなりますか？</summary><div><p>フォームの入力後に、振込先をご案内します。ご入金の確認後、公式LINEで日程を調整し、オンライン（Zoom）で90分の鑑定を行います。鑑定後に、鑑定書（PDF）をお渡しします。</p></div></details><details><summary>生年月日以外に必要な情報はありますか？</summary><div><p>氏名と性別が必要です（算命学では、性別が算出に関わるためです）。出生地・出生時刻は必要ありません。特別な準備もいりません。</p></div></details>
     </div>
-    <p class="r more small">ほかに聞きたいことは、<a href="https://lin.ee/RJBLLfK" target="_blank" rel="noopener" data-cta="LINEで相談する" data-cta-loc="faq">公式LINE</a>からどうぞ。</p>
+    <div class="r"><div class="acc " data-acc><button type="button" class="acc-btn" aria-expanded="false" aria-controls="acc-faq" data-open="ほかの質問を見る" data-close="閉じる"><span class="t">ほかの質問を見る</span><span class="ic" aria-hidden="true"></span></button><div class="acc-panel" id="acc-faq"><div class="acc-in"><div class="fq-list"><details><summary>90分で何をしますか？</summary><div><p>算命学をもとに、自分の性質や宿命について話しながら、自分のことを知っていく時間です。くわしくは<a href="#flow">90分の流れ</a>をご覧ください。</p></div></details><details><summary>未来を予言してもらえますか？</summary><div><p>KAGAMIは、未来を当てることを目的としていません。自分のことを知り、これからの選択を考えるために算命学を使います。</p></div></details><details><summary>悩みがまとまっていなくても大丈夫ですか？</summary><div><p>大丈夫です。話していくなかで、今のご状況を一緒に整理します。医療・法律・投資に関する助言は行っていません。</p></div></details><details><summary>先に振り込むのが不安です。</summary><div><p>お振込みから1ヶ月以内に当方からご連絡が取れない場合は、鑑定を実施せず、全額をご返金します。返金にかかる振込手数料も当方が負担します。</p></div></details><details><summary>キャンセルや日程変更はできますか？</summary><div><p>鑑定日の前日までにご連絡いただければ、日程変更についてご相談いただけます。日程確定後のお客様都合によるキャンセル・返金については、<a href="tokushoho.html">特定商取引法に基づく表記</a>をご確認ください。</p></div></details></div><p class="small fq-line">ほかに聞きたいことは、<a href="https://lin.ee/RJBLLfK" target="_blank" rel="noopener" data-cta="LINEで相談する" data-cta-loc="faq">公式LINE</a>からどうぞ。</p></div></div></div></div>
   </div>
 </section>
 
-<!-- 11 FINAL：静かに終わる -->
 <section id="final" class="final" data-section="final_cta">
   <div class="fn-in">
     <h2 class="fn-h r"><span class="ln"><i>自分のことを</i></span><span class="ln"><i>知る、90分。</i></span></h2>
