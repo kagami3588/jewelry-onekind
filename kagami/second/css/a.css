@@ -192,9 +192,11 @@ p{margin:0}
 .st-cols{display:grid;gap:26px}
 .portrait{margin:0}
 .portrait img{width:100%;aspect-ratio:16/10;object-fit:cover;object-position:46% 22%;filter:grayscale(1) contrast(1.06)}
-.st-pts li{font-size:15px;line-height:1.9;padding:9px 0;border-bottom:1px solid var(--rule)}
-.st-pts li:first-child{border-top:1px solid var(--rule)}
-.st-text .acc{margin-top:10px}
+.st-lead .st-k{font-family:var(--serif);font-size:12px;letter-spacing:.3em;color:var(--brass)}
+.st-lead .st-big{font-family:var(--serif);font-weight:500;font-size:clamp(19px,5.4vw,30px);line-height:1.7;margin-top:10px;letter-spacing:.02em}
+.st-lead .st-mid{font-size:15px;line-height:1.9;margin-top:18px;color:var(--mute)}
+.st-lead .st-hook{font-family:var(--serif);font-size:clamp(17px,4.6vw,22px);line-height:1.8;margin-top:6px}
+.st-text .acc{margin-top:16px}
 .st-text .acc-in p{font-size:14.5px;max-width:30em}
 .st-text .acc-in .lead{font-family:var(--serif);font-size:clamp(17px,4.6vw,22px);line-height:1.9;color:var(--ink)}
 .facts{display:flex;flex-wrap:wrap;gap:22px 34px;margin-top:5vh;padding-top:22px;border-top:1px solid var(--rule)}
