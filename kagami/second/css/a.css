@@ -445,3 +445,8 @@ details a{border-bottom:1px solid var(--brass);text-decoration:none}
   .get-intro,.do-body,.about-body,.lt-body{margin-left:42%}
 }
 @media (min-width:961px){.lt-body{max-width:36em}.do-body{max-width:30em}}
+
+/* 動画（クリックするまで読み込まない） */
+.about-body .yt{margin:2.2em 0 1.6em}
+.vo-video{margin-top:5vh}
+.vo-video .yt{margin:0}
