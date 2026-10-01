@@ -121,7 +121,7 @@ p{margin:0}
 @keyframes rise{to{transform:none}}
 @keyframes settle{from{transform:scale(1.06)}to{transform:none}}
 @media (max-height:720px) and (max-width:700px){
-  .hero-for,.next{display:none}
+  .next{display:none}
   .hero-foot{margin-top:18px;gap:16px}
   .eyebrow{margin-bottom:14px}
 }
@@ -137,10 +137,9 @@ p{margin:0}
 .fill{position:absolute;left:0;top:-1px;height:3px;width:calc(var(--w) * 1%);background:var(--ink)}
 .scale{display:flex;justify-content:space-between;margin-top:8px;font-family:var(--latin);font-size:13px;letter-spacing:.2em;color:var(--mute)}
 .stat-lead{font-family:var(--serif);font-size:clamp(17px,4.8vw,26px);line-height:1.85;margin:5vh 0 0 16%}
+.stat-short{font-size:15px;line-height:2;margin:3vh 0 0 16%;color:var(--ink)}
 .cite{font-size:11.5px;color:var(--mute);line-height:1.8;margin:12px 0 0 16%;max-width:30em}
 .cite a{text-decoration:none;border-bottom:1px solid var(--rule)}
-.stat .acc{margin:3vh 0 0 16%}
-.stat .acc-in p{font-size:14.5px;max-width:26em}
 
 /* ================= 03 3万円（KAGAMIとは・算命学を含む） ================= */
 .price{background:var(--navy);color:#EDEAE3;padding:var(--v) var(--m)}
@@ -166,6 +165,7 @@ p{margin:0}
 .rp-thumbs figcaption{font-size:11px;color:var(--mute-d);margin-top:6px}
 .rp-thumbs:empty{display:none}
 .value{font-family:var(--serif);font-weight:500;font-size:clamp(20px,5.8vw,34px);line-height:1.6;color:#fff;margin-top:7vh}
+.creed{font-family:var(--serif);font-size:clamp(14px,3.9vw,18px);line-height:1.9;color:var(--brass-l);margin-top:8px}
 .mini{margin-top:4.5vh;padding-top:3vh;border-top:1px solid var(--rule-d)}
 .mini-t{font-size:15px;line-height:1.9;color:#E6E3DB}
 .swap2{margin-top:6px;font-size:13px;color:var(--mute-d)}
@@ -292,7 +292,7 @@ details a{border-bottom:1px solid var(--brass);text-decoration:none}
 /* ================= タブレット ================= */
 @media (min-width:600px) and (max-width:960px){
   .hero-foot{grid-template-columns:1fr 1fr;align-items:end}
-  .stat-lead,.cite,.stat .acc{margin-left:26%}
+  .stat-lead,.stat-short,.cite{margin-left:26%}
   .st-cols{max-width:640px}
   .portrait img{aspect-ratio:2/1}
 }
@@ -319,7 +319,7 @@ details a{border-bottom:1px solid var(--brass);text-decoration:none}
   .stat{display:grid;grid-template-columns:1fr 1fr;column-gap:6vw;align-items:end}
   .stat>.kicker{grid-column:1/-1}
   .stat>.meter{grid-column:1/-1}
-  .stat-lead,.cite,.stat .acc{margin-left:0;grid-column:2}
+  .stat-lead,.stat-short,.cite{margin-left:0;grid-column:2}
   .stat-lead{margin-top:4vh}
   .price>*{max-width:900px}
   .price{padding-left:max(var(--m),calc((100% - 900px)/2 ));padding-right:max(var(--m),calc((100% - 900px)/2 ))}
