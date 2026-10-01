@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://sannmei-kantei.netlify.app/sitemap.xml
