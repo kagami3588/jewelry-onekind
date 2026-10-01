@@ -193,9 +193,8 @@ p{margin:0}
 .portrait{margin:0}
 .portrait img{width:100%;aspect-ratio:16/10;object-fit:cover;object-position:46% 22%;filter:grayscale(1) contrast(1.06)}
 .st-lead .st-k{font-family:var(--serif);font-size:12px;letter-spacing:.3em;color:var(--brass)}
-.st-lead .st-big{font-family:var(--serif);font-weight:500;font-size:clamp(19px,5.4vw,30px);line-height:1.7;margin-top:10px;letter-spacing:.02em}
-.st-lead .st-mid{font-size:15px;line-height:1.9;margin-top:18px;color:var(--mute)}
-.st-lead .st-hook{font-family:var(--serif);font-size:clamp(17px,4.6vw,22px);line-height:1.8;margin-top:6px}
+.st-lead .st-big{font-family:var(--serif);font-weight:500;font-size:clamp(17px,4.9vw,26px);line-height:1.75;margin-top:10px;letter-spacing:.02em;text-wrap:balance}
+.st-lead .st-hook{font-size:15px;line-height:1.95;margin-top:16px;color:var(--mute);text-wrap:balance}
 .st-text .acc{margin-top:16px}
 .st-text .acc-in p{font-size:14.5px;max-width:30em}
 .st-text .acc-in .lead{font-family:var(--serif);font-size:clamp(17px,4.6vw,22px);line-height:1.9;color:var(--ink)}
