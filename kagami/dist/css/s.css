@@ -403,3 +403,8 @@ details a,.faq .more a{border-bottom:1px solid var(--gold);text-decoration:none}
 .kagami .acc-in .know{margin-top:20px}
 .sanmei .acc-in .yt{margin:26px 0 0}
 .sanmei .acc-in .more{margin-top:26px}
+
+/* お客様の声（見出し＋本文の形式） */
+.voice .who{font-size:13px;letter-spacing:.12em;color:var(--gold);margin-bottom:12px}
+.voice .vt{font-family:var(--serif);font-weight:500;font-size:clamp(16px,4.1vw,24px);line-height:1.65;text-wrap:balance;letter-spacing:.03em;margin:0 0 14px;color:var(--ink)}
+.voice .vb{font-size:14.5px;line-height:2;color:#2E3945}
