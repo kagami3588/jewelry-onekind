@@ -102,7 +102,7 @@ p{margin:0}
 .eyebrow i{width:26px;height:1px;background:rgba(255,255,255,.55)}
 .hero h1{font-family:var(--serif);font-weight:500;line-height:1.16}
 .hero .s1{font-size:clamp(15px,5.4vw,30px);font-weight:400;letter-spacing:.08em;color:rgba(255,255,255,.85);margin-bottom:.45em}
-.hero .s2{font-size:clamp(56px,18vw,176px);font-weight:600;letter-spacing:.01em}
+.hero .s2{font-size:clamp(40px,12.6vw,112px);font-weight:600;letter-spacing:.02em;margin-bottom:.06em}
 .hero .s3{font-size:clamp(34px,10.6vw,108px);font-weight:500;letter-spacing:.02em}
 .hero-foot{display:grid;gap:22px;margin-top:26px}
 .hero-sub{font-size:clamp(14px,3.9vw,18px);line-height:1.95;color:rgba(255,255,255,.92)}
@@ -308,7 +308,7 @@ details a{border-bottom:1px solid var(--brass);text-decoration:none}
   .hero{align-items:center}
   .hero-copy{padding:130px var(--m) 90px}
   .hero .s1{font-size:clamp(18px,1.9vw,30px)}
-  .hero .s2{font-size:clamp(100px,11.4vw,190px)}
+  .hero .s2{font-size:clamp(64px,7.6vw,124px)}
   .hero .s3{font-size:clamp(60px,6.4vw,108px)}
   .hero-foot{grid-template-columns:auto auto;justify-content:start;align-items:end;gap:56px;margin-top:44px}
   .hero-act{width:380px}
@@ -486,3 +486,6 @@ details a{border-bottom:1px solid var(--brass);text-decoration:none}
 
 /* スキップ（タップ）：待ち時間をなくして、すぐ表示 */
 .js.intro.intro-skip .hero .photo img,.js.intro.intro-skip .hero h1 .ln>i,.js.intro.intro-skip .hero-foot,.js.intro.intro-skip .hd,.js.intro.intro-skip .cue{animation-delay:0s!important;animation-duration:.6s!important}
+
+/* 320〜360px：見出し2行目が折り返さないように */
+@media (max-width:360px){.hero .s3{font-size:9.4vw;letter-spacing:0}.hero .s2{font-size:12vw}.spec2{font-size:12px;letter-spacing:.04em}.spec2 b{margin:0 .35em}}
