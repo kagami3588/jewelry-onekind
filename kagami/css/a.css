@@ -540,3 +540,46 @@ details a{border-bottom:1px solid var(--brass);text-decoration:none}
 /* ダイジェスト：実績の帯（数字とanan掲載だけ） */
 .story.proof{padding:calc(var(--v) * .8) var(--m) calc(var(--v) * .7)}
 .story.proof .facts{margin-top:0;padding-top:0;border-top:0}
+
+/* ================= PC表示の整え（960px以上）=================
+   スマホ用の配置を横に広げただけだと、左右に大きな空白ができる。
+   全ブロックの左右の位置を同じ線にそろえ（最大1280px）、横が広い画面では2列に組む。 */
+@media (min-width:960px){
+  :root{--px:max(var(--m),calc((100% - 1280px) / 2))}
+  .hd{padding-left:var(--px);padding-right:var(--px)}
+  .hero-copy{padding-left:var(--px);padding-right:var(--px)}
+  .stat,.story.proof,.more,.faq,.letter,.final,.ft{padding-left:var(--px);padding-right:var(--px)}
+  /* ヘッダーの文字が、明るい背景（ホワイトボード）に重なっても読めるように */
+  .shade{background:linear-gradient(180deg,rgba(10,21,32,.78) 0,rgba(10,21,32,0) 170px),linear-gradient(90deg,rgba(10,21,32,1) 0,rgba(10,21,32,1) 30%,rgba(10,21,32,.5) 52%,rgba(10,21,32,.05) 100%),linear-gradient(0deg,rgba(10,21,32,.55),rgba(10,21,32,0) 38%)}
+  .dnav a{text-shadow:0 1px 8px rgba(10,21,32,.6)}
+  /* 17.4%：左に数字、右に文章 */
+  .stat{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);grid-template-areas:"kick kick" "meter lead" "meter short" "meter cite";column-gap:6vw;align-content:start}
+  .stat .kicker{grid-area:kick;margin-bottom:5vh}
+  .stat .meter{grid-area:meter;align-self:end}
+  .stat .stat-lead{grid-area:lead;margin:0;align-self:end}
+  .stat .stat-short{grid-area:short;margin:3vh 0 0}
+  .stat .cite{grid-area:cite;margin:3vh 0 0}
+  /* 実績：数字と雑誌を中央寄せの2列に */
+  .story.proof .facts{grid-template-columns:minmax(0,1fr) minmax(0,1fr);align-items:center;gap:6vw}
+  .story.proof .facts .mag{justify-self:start}
+  .story.proof .facts .mag img{width:clamp(220px,19vw,300px)}
+  /* もっと知る：2列 */
+  .more .tz-list{max-width:none;display:grid;grid-template-columns:1fr 1fr;column-gap:6vw}
+  /* よくある質問：左に見出し、右に質問 */
+  .fq-in{max-width:none;margin:0;display:grid;grid-template-columns:minmax(0,4fr) minmax(0,8fr);column-gap:6vw}
+  .fq-in .label{grid-column:1;grid-row:1 / span 2}
+  .fq-in .fq-list{grid-column:2;grid-row:1}
+  .fq-in .fq-list+div{grid-column:2;grid-row:2}
+  /* 最後に僕から：左に見出し、右に本文 */
+  .lt-in{display:grid;grid-template-columns:minmax(0,4fr) minmax(0,8fr);column-gap:6vw;align-items:start}
+  .lt-body{margin:0;max-width:30em}
+  .lt-h{position:sticky;top:12vh}
+  /* 最後のCTA：左に言葉、右に申し込み */
+  .final{align-items:center}
+  .fn-in{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,420px);column-gap:6vw;align-items:end;padding-top:0}
+  .fn-in .fn-h,.fn-in .rule,.fn-in .fn-sub{grid-column:1}
+  .fn-in .fn-act{grid-column:2;grid-row:1 / span 3;margin-top:0;max-width:none}
+}
+/* 実績の帯：左右の余白が二重になっていたのを解消（スマホ・PC共通） */
+.story.proof .st-in{padding:0;margin-top:0}
+@media (min-width:960px){.fq-in .label{align-self:start;padding-top:18px}}
