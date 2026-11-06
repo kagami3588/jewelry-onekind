@@ -24,6 +24,14 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;500;600&family=Noto+Sans+JP:wght@400;500&family=Cormorant+Garamond:wght@300;400&display=swap" media="print" onload="this.media='all'">
 <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;500;600&family=Noto+Sans+JP:wght@400;500&family=Cormorant+Garamond:wght@300;400&display=swap"></noscript>
 <script>document.documentElement.className='js';</script>
+<script>
+/* 立ち上げ演出：同じ閲覧中は1回だけ。動きを減らす設定の端末では出さない。?intro=1 で再生を強制 */
+(function(){try{var d=document.documentElement,f=/[?&]intro=1/.test(location.search),s=false;
+try{s=sessionStorage.getItem("kg_intro")}catch(e){}
+if(!matchMedia("(prefers-reduced-motion: reduce)").matches&&(f||!s)){d.classList.add("intro");
+var end=function(){d.classList.add("intro-done");try{sessionStorage.setItem("kg_intro","1")}catch(e){}};
+window.kgIntroEnd=function(){d.classList.add("intro-skip");end()};setTimeout(end,3900);}}catch(e){}})();
+</script>
 
 
 
@@ -32,6 +40,7 @@
 <div id="bar" aria-hidden="true"></div>
 <a href="#get" class="skip">本文へ移動</a>
 
+<div id="intro" aria-hidden="true"><i class="ih t"></i><i class="ih b"></i><div class="im"><span class="mk">鑑</span><span class="hl"></span><em>KAGAMI</em></div></div>
 <header class="hd">
   <a href="./" class="logo" aria-label="鑑 KAGAMI トップ"><span>鑑</span><em>KAGAMI</em></a>
   <nav class="dnav" aria-label="サイト内メニュー"><a href="sanmeigaku.html">算命学とは</a><a href="story.html">林竜輔</a><a href="voices.html">お客様の声</a><a href="kantei.html">鑑定について</a></nav>
@@ -290,6 +299,7 @@ window.KAGAMI_CONFIG = {
   REPORT_IMAGES: []
 };
 </script>
+<script>(function(){var o=document.getElementById("intro");if(o)o.addEventListener("click",function(){if(window.kgIntroEnd)window.kgIntroEnd()});})();</script>
 <script src="js/s.js" defer></script>
 <script src="js/a.js" defer></script>
 </body>

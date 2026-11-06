@@ -45,3 +45,8 @@ JSが動かない環境では、すべて開いた状態で表示されます。
 cta_click（hero / price / flow / final）、application_start、application_complete（`?applied=1` 付きで戻せる場合）、
 section_view（hero / stat_17_4 / price / story / flow_90min / report / voices / faq / final_cta）、scroll_depth（25/50/75/90）、
 video_play / video_progress（25/50/75/100）、faq_interaction、testimonial_view。
+
+## 立ち上げ演出（トップのみ）
+- 紺の幕に「鑑」と一本の線 → 線から幕が上下に開く → 写真・見出し・CTAが順に出る（約2.9秒、タップでスキップ）。
+- 同じ閲覧中は1回だけ。動きを減らす設定の端末・JSなしでは出ません。確認用に `index.html?intro=1` で毎回再生。
+- 無効にしたい場合：index.html 先頭付近の「立ち上げ演出」script と `<div id="intro">` を削除。

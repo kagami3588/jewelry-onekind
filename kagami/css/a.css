@@ -450,3 +450,39 @@ details a{border-bottom:1px solid var(--brass);text-decoration:none}
 .about-body .yt{margin:2.2em 0 1.6em}
 .vo-video{margin-top:5vh}
 .vo-video .yt{margin:0}
+
+/* ================= 立ち上げ演出（鑑＝鏡）=================
+   紺の幕に「鑑」と一本の線 → 線を境に幕が上下へ開く → 写真と見出しが立ち上がる。
+   全体で約2.9秒。タップでスキップ。JSなし／動きを減らす設定では出ません。 */
+#intro{display:none}
+.intro:not(.intro-done){overflow:hidden}
+.intro-done #intro,.intro-skip #intro{display:none!important}
+.intro #intro{display:block;position:fixed;inset:0;z-index:100;cursor:pointer;animation:iEnd 0s linear 2.9s forwards}
+#intro .ih{position:absolute;left:0;right:0;height:50.2%;background:var(--navy)}
+#intro .ih.t{top:0;animation:iTop 1.15s cubic-bezier(.76,0,.24,1) 1.55s forwards}
+#intro .ih.b{bottom:0;animation:iBot 1.15s cubic-bezier(.76,0,.24,1) 1.55s forwards}
+#intro .im{position:absolute;left:0;right:0;top:50%;transform:translateY(-50%);display:flex;flex-direction:column;align-items:center;gap:0}
+#intro .mk{font-family:var(--serif);font-weight:500;font-size:clamp(64px,17vw,132px);line-height:1;color:var(--brass-l);opacity:0;transform:translateY(-8px) scale(1.07);animation:iMk 1s var(--ease) .2s forwards,iFade .35s ease 1.5s forwards;margin-bottom:.12em}
+#intro .hl{display:block;width:min(64vw,420px);height:1px;background:linear-gradient(90deg,transparent,var(--brass-l) 20%,#fff 50%,var(--brass-l) 80%,transparent);transform:scaleX(0);animation:iLine .95s var(--ease) .55s forwards,iFade .5s ease 2.05s forwards}
+#intro em{font-style:normal;font-family:var(--latin);font-size:clamp(12px,3.4vw,15px);color:rgba(255,255,255,.82);margin-top:1.15em;letter-spacing:.62em;padding-left:.62em;opacity:0;animation:iEm 1.1s var(--ease) .8s forwards,iFade .35s ease 1.5s forwards}
+@keyframes iMk{to{opacity:1;transform:none}}
+@keyframes iLine{to{transform:scaleX(1)}}
+@keyframes iEm{to{opacity:1;letter-spacing:.34em;padding-left:.34em}}
+@keyframes iFade{to{opacity:0}}
+@keyframes iTop{to{transform:translateY(-101%)}}
+@keyframes iBot{to{transform:translateY(101%)}}
+@keyframes iEnd{to{visibility:hidden;pointer-events:none}}
+/* 幕が開くまで待ってから、写真・見出し・本文が順に立ち上がる */
+.js.intro .hero .photo img{animation:iPhoto 2.6s var(--ease) 1.45s both}
+.js.intro .hero h1 .s1>i{animation-delay:2.0s}
+.js.intro .hero h1 .s2>i{animation-delay:2.18s}
+.js.intro .hero h1 .s3>i{animation-delay:2.36s}
+.js.intro .hero-foot,.js.intro .hd,.js.intro .cue{opacity:0;animation:iUp 1s var(--ease) 2.75s forwards}
+.js.intro .hd{animation-name:iFadeIn;animation-delay:2.5s}
+@keyframes iPhoto{from{transform:scale(1.14);filter:saturate(.15) contrast(1.06) brightness(.7) blur(7px)}to{transform:none;filter:saturate(.7) contrast(1.06) brightness(1) blur(0)}}
+@keyframes iUp{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+@keyframes iFadeIn{to{opacity:1}}
+@media (prefers-reduced-motion:reduce){#intro{display:none!important}}
+
+/* スキップ（タップ）：待ち時間をなくして、すぐ表示 */
+.js.intro.intro-skip .hero .photo img,.js.intro.intro-skip .hero h1 .ln>i,.js.intro.intro-skip .hero-foot,.js.intro.intro-skip .hd,.js.intro.intro-skip .cue{animation-delay:0s!important;animation-duration:.6s!important}
