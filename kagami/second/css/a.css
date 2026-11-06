@@ -536,3 +536,7 @@ details a{border-bottom:1px solid var(--brass);text-decoration:none}
 .facts .num small{font-size:clamp(15px,4vw,20px)}
 @media (min-width:960px){.priceline{font-size:17px}}
 @media (max-width:360px){.priceline{font-size:12.5px}}
+
+/* ダイジェスト：実績の帯（数字とanan掲載だけ） */
+.story.proof{padding:calc(var(--v) * .8) var(--m) calc(var(--v) * .7)}
+.story.proof .facts{margin-top:0;padding-top:0;border-top:0}
