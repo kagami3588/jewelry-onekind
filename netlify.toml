@@ -1,0 +1,7 @@
+[build]
+  base = "."
+  command = ""
+  publish = "kagami/dist"
+
+# Cache headers are defined only in kagami/dist/_headers.
+# Keep that file as the single source of truth to avoid conflicting rules.
