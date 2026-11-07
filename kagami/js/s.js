@@ -11,7 +11,7 @@
   var clamp = function (v) { return v < 0 ? 0 : v > 1 ? 1 : v; };
 
   /* ================= 計測 =================
-     GA4 の測定IDが空なら、何も読み込まず何も送りません。個人情報は送りません。 */
+     GA4_ID が空でも、GTM_ID があればタグマネージャーへイベントを渡します。どちらも空なら何も送りません。個人情報は送りません。 */
   var sent = {};
   window.dataLayer = window.dataLayer || [];
   function gtag() { window.dataLayer.push(arguments); }
@@ -27,6 +27,8 @@
     for (var k in params) d[k] = params[k];
     if (CFG.DEBUG) console.log("[計測]", name, d);
     if (ID) { try { gtag("event", name, d); } catch (e) {} }
+    /* タグマネージャー経由：イベント名つきで dataLayer に積む（GTM側のトリガーで受け取る） */
+    if (CFG.GTM_ID) { try { var o = { event: name }; for (var q in d) o[q] = d[q]; window.dataLayer.push(o); } catch (e) {} }
   }
   window.kagamiTrack = track;
 
