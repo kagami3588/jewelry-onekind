@@ -597,7 +597,7 @@ details a{border-bottom:1px solid var(--brass);text-decoration:none}
   .stat .cite{font-size:13.5px}
   /* 実績 */
   .story.proof{padding-top:calc(var(--v) * .6);padding-bottom:calc(var(--v) * .6)}
-  .story.proof .facts .mag img{width:clamp(190px,15vw,240px)}
+  .story.proof .facts .mag img{width:clamp(260px,23vw,360px)}
   .facts li{font-size:14px}
   /* もっと知る */
   .more{padding-top:calc(var(--v) * .6);padding-bottom:calc(var(--v) * .5)}
