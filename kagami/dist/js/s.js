@@ -3,7 +3,6 @@
 (function () {
   "use strict";
   var CFG = window.KAGAMI_CONFIG || {};
-  var ID = (CFG.GA4_ID || "").trim();
   var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
   var mobile = window.matchMedia("(max-width:960px)").matches;
   var hasIO = "IntersectionObserver" in window;
@@ -11,24 +10,18 @@
   var clamp = function (v) { return v < 0 ? 0 : v > 1 ? 1 : v; };
 
   /* ================= 計測 =================
-     GA4_ID が空でも、GTM_ID があればタグマネージャーへイベントを渡します。どちらも空なら何も送りません。個人情報は送りません。 */
+     計測は Google タグマネージャー（各ページ上部の GTM コード）に一本化しています。
+     イベントは dataLayer.push({ event: 名前, ...パラメーター }) の形で渡します。
+     GA4 への直接送信（gtag.js の読み込み・config・event）は行いません（二重計測の防止）。
+     個人情報・フォーム入力値・URL全体（クエリ）は送りません。 */
   var sent = {};
   window.dataLayer = window.dataLayer || [];
-  function gtag() { window.dataLayer.push(arguments); }
-  if (ID) {
-    var g = document.createElement("script");
-    g.async = true; g.src = "https://www.googletagmanager.com/gtag/js?id=" + encodeURIComponent(ID);
-    document.head.appendChild(g);
-    gtag("js", new Date()); gtag("config", ID, { anonymize_ip: true });
-  }
   function track(name, params, once) {
     if (once) { if (sent[once]) return; sent[once] = 1; }
-    var d = { page_path: location.pathname, device: mobile ? "mobile" : "desktop" };
+    var d = { event: name, page_path: location.pathname, device: mobile ? "mobile" : "desktop" };
     for (var k in params) d[k] = params[k];
     if (CFG.DEBUG) console.log("[計測]", name, d);
-    if (ID) { try { gtag("event", name, d); } catch (e) {} }
-    /* タグマネージャー経由：イベント名つきで dataLayer に積む（GTM側のトリガーで受け取る） */
-    if (CFG.GTM_ID) { try { var o = { event: name }; for (var q in d) o[q] = d[q]; window.dataLayer.push(o); } catch (e) {} }
+    try { window.dataLayer.push(d); } catch (e) {}
   }
   window.kagamiTrack = track;
 
@@ -185,17 +178,64 @@
     document.addEventListener("keydown", function (e) { if (e.key === "Escape") menu.removeAttribute("open"); });
   }
 
-  /* ================= YouTube：クリックしたときだけ読み込む ================= */
+  /* ================= YouTube：クリックしたときだけ読み込む =================
+     iframe を作っただけでは「再生」と数えません。YouTube IFrame Player API で
+     実際に再生が始まったとき video_play、再生位置が 25/50/75/90% を通過したとき video_progress を送ります。
+     同じ動画・同じ到達率は、ページ表示中に1回だけ。シークで飛ばした分は数えません。 */
+  var ytQueue = [], ytLoading = false;
+  function loadYTApi(cb) {
+    if (window.YT && window.YT.Player) { cb(); return; }
+    ytQueue.push(cb);
+    if (ytLoading) return;
+    ytLoading = true;
+    var prevReady = window.onYouTubeIframeAPIReady;
+    window.onYouTubeIframeAPIReady = function () {
+      if (typeof prevReady === "function") { try { prevReady(); } catch (e) {} }
+      while (ytQueue.length) { try { ytQueue.shift()(); } catch (e) {} }
+    };
+    var s = document.createElement("script");
+    s.async = true; s.src = "https://www.youtube.com/iframe_api";
+    document.head.appendChild(s);
+  }
+  function watchYT(frame, id) {
+    var vid = "youtube_" + id, timer = null, prev = 0, played = false;
+    function tick(pl) {
+      var dur = pl.getDuration(), cur = pl.getCurrentTime();
+      if (!dur) return;
+      var pc = cur / dur * 100;
+      if (pc > prev && pc - prev < 10) {
+        [25, 50, 75, 90].forEach(function (m) {
+          if (prev < m && pc >= m) track("video_progress", { video: vid, percent: m }, "ytp" + id + m);
+        });
+      }
+      prev = pc;
+    }
+    function onState(pl, st) {
+      if (st === 1) {
+        if (!played) { played = true; track("video_play", { video: vid }, "yt" + id); }
+        if (!timer) timer = setInterval(function () { tick(pl); }, 500);
+      } else if (timer) { clearInterval(timer); timer = null; }
+    }
+    loadYTApi(function () {
+      try {
+        var pl = new window.YT.Player(frame, { events: {
+          onReady: function (e) { if (e.target.getPlayerState && e.target.getPlayerState() === 1) onState(e.target, 1); },
+          onStateChange: function (e) { onState(e.target, e.data); }
+        } });
+      } catch (err) {}
+    });
+  }
   $(".yt").forEach(function (box) {
     var btn = box.querySelector(".frame"), id = box.getAttribute("data-yt");
     btn.addEventListener("click", function () {
-      var f = document.createElement("iframe");
-      f.src = "https://www.youtube-nocookie.com/embed/" + id + "?autoplay=1&rel=0&modestbranding=1&playsinline=1";
+      var f = document.createElement("iframe"), q = "autoplay=1&rel=0&modestbranding=1&playsinline=1&enablejsapi=1";
+      if (/^https?:$/.test(location.protocol)) q += "&origin=" + encodeURIComponent(location.origin);
+      f.src = "https://www.youtube-nocookie.com/embed/" + id + "?" + q;
       f.title = box.getAttribute("data-yt-title") || "動画";
       f.allow = "autoplay; encrypted-media; picture-in-picture; fullscreen";
       f.allowFullscreen = true;
       btn.innerHTML = ""; btn.appendChild(f); btn.style.cursor = "default";
-      track("video_play", { video: "youtube_" + id }, "yt" + id);
+      watchYT(f, id);
     }, { once: true });
   });
 

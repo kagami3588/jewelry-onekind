@@ -58,3 +58,9 @@ video_play / video_progress（25/50/75/100）、faq_interaction、testimonial_vi
 ## 文字サイズの基準（トップ・サブページ共通）
 見出し 26〜42px ／ 小見出し 22〜32px ／ 導入文 18〜22px ／ 引用 20〜30px ／ 本文 15〜16px ／ 補足 12.5〜13px ／ 数字（17.4%・30,000円・1,000名）88〜160px。
 トップは a.css 末尾の「文字サイズの統一」にまとめています。変えるときはここだけ編集します。
+
+## 計測（Google タグマネージャーに一本化）
+- 各ページ上部に GTM-PBH83M9S のコード。GA4（G-S4966GLD1E）への直接送信は行いません（二重計測の防止）。
+- s.js の track() が dataLayer.push({ event: 名前, page_path, device, ...パラメーター }) を送ります。
+- YouTube は IFrame Player API で、実際の再生開始（video_play）と 25/50/75/90% 通過（video_progress）を記録します。
+- 設定ブロックの GA4_ID・GTM_ID は廃止しました。
