@@ -25,7 +25,7 @@
 | 料金 | 30,000円（税込）、銀行振込（事前） |
 | 必要な情報 | 氏名・性別・生年月日（出生地・出生時刻は不要） |
 | 申し込みの流れ | フォーム入力 → 振込先のご案内 → お振込み → LINEで日程調整 → 90分の鑑定 |
-| 申し込みフォーム | https://form.run/@shukumeikantei |
+| 申し込みフォーム（2026-11-09 に form.run から Google Apps Script に変更） | https://script.google.com/macros/s/AKfycbxHHCUmc7vprxTk6W4Mibh43z3yQW3A4jnoGkwEH4gAZD3OU7RySPWGbzdpGq8atu2W/exec |
 | 無料相談（公式LINE） | https://lin.ee/RJBLLfK |
 | 実績表記 | 1,000名以上を鑑定（経営者から主婦まで幅広い方）／雑誌『anan』に掲載（2025年12月） |
 | データの出典 | 17.4%：株式会社ジコリカイ調査（2025年8月、20〜50代の働く男女500名）https://prtimes.jp/main/html/rd/p/000000022.000074189.html |
@@ -143,7 +143,7 @@ Googleタグマネージャー（GTM）に一本化し、サイトのイベン�
 
 これから何を選ぶのかが少し見えてくる
 
-自分の宿命を知る  → <https://form.run/@shukumeikantei>
+自分の宿命を知る  → <https://script.google.com/macros/s/AKfycbxHHCUmc7vprxTk6W4Mibh43z3yQW3A4jnoGkwEH4gAZD3OU7RySPWGbzdpGq8atu2W/exec>
 
 90分 ｜ 30,000円（税込） ｜ オンライン
 
@@ -300,7 +300,7 @@ KAGAMIは 未来を当てることを目的としていません 自分のこと
 
 90分 ｜ 30,000円（税込） ｜ オンライン
 
-自分の宿命を知る  → <https://form.run/@shukumeikantei> まず話してみる 無料相談  → <https://lin.ee/RJBLLfK>
+自分の宿命を知る  → <https://script.google.com/macros/s/AKfycbxHHCUmc7vprxTk6W4Mibh43z3yQW3A4jnoGkwEH4gAZD3OU7RySPWGbzdpGq8atu2W/exec> まず話してみる 無料相談  → <https://lin.ee/RJBLLfK>
 
 フォーム入力 → 振込先のご案内 → お振込み → LINEで日程調整 → 90分の鑑定
 
@@ -427,7 +427,7 @@ Zoomで 林竜輔と1対1で話します 一方的に聞くだけの時間では
 
 出生地・出生時刻は必要ありません
 
-自分の宿命を知る  → <https://form.run/@shukumeikantei>
+自分の宿命を知る  → <https://script.google.com/macros/s/AKfycbxHHCUmc7vprxTk6W4Mibh43z3yQW3A4jnoGkwEH4gAZD3OU7RySPWGbzdpGq8atu2W/exec>
 
 押すと申し込みフォームが開きます この時点で お支払いはありません
 
@@ -565,7 +565,7 @@ Zoomで 林竜輔と1対1で話します 一方的に聞くだけの時間では
 
 オンライン／銀行振込（事前）／鑑定書付き
 
-自分の宿命を知る  → <https://form.run/@shukumeikantei>
+自分の宿命を知る  → <https://script.google.com/macros/s/AKfycbxHHCUmc7vprxTk6W4Mibh43z3yQW3A4jnoGkwEH4gAZD3OU7RySPWGbzdpGq8atu2W/exec>
 
 フォーム入力 → 振込先のご案内 → お振込み → LINEで日程調整 → 90分の鑑定
 
@@ -688,7 +688,7 @@ Zoomで 林竜輔と1対1で話します 一方的に聞くだけの時間では
 
 オンライン／銀行振込（事前）／鑑定書付き
 
-自分の宿命を知る  → <https://form.run/@shukumeikantei>
+自分の宿命を知る  → <https://script.google.com/macros/s/AKfycbxHHCUmc7vprxTk6W4Mibh43z3yQW3A4jnoGkwEH4gAZD3OU7RySPWGbzdpGq8atu2W/exec>
 
 フォーム入力 → 振込先のご案内 → お振込み → LINEで日程調整 → 90分の鑑定
 
@@ -722,11 +722,13 @@ Zoomで 林竜輔と1対1で話します 一方的に聞くだけの時間では
 
 #### ブロック：sanmeigaku
 
+算命学とは4000年前から人を知ろうとした先人の叡智です
+
 **人には**
 
-それぞれ違いがあります
+それぞれ違いがある
 
-走ることで伸びる人がいれば 立ち止まることで深まる人もいる 早く動く人がいれば 時間をかけることで力を発揮する人もいる どちらが良い 悪いではありません 違いがあります
+その違いは宿命を見ればすぐわかる
 
 算命学では 生まれ持った傾向を「宿命」と捉えます
 
@@ -786,7 +788,7 @@ KAGAMIでの使い方
 
 問題ありません 算命学の考え方を説明したうえで あなた自身の宿命について できるだけ日常の言葉でお話しします
 
-自分の宿命を知る  → <https://form.run/@shukumeikantei>
+自分の宿命を知る  → <https://script.google.com/macros/s/AKfycbxHHCUmc7vprxTk6W4Mibh43z3yQW3A4jnoGkwEH4gAZD3OU7RySPWGbzdpGq8atu2W/exec>
 
 オンライン90分／30,000円（税込）／銀行振込（事前）
 
@@ -927,7 +929,7 @@ M.Y.さん
 
 オンライン／銀行振込（事前）／鑑定書付き
 
-自分の宿命を知る  → <https://form.run/@shukumeikantei>
+自分の宿命を知る  → <https://script.google.com/macros/s/AKfycbxHHCUmc7vprxTk6W4Mibh43z3yQW3A4jnoGkwEH4gAZD3OU7RySPWGbzdpGq8atu2W/exec>
 
 フォーム入力 → 振込先のご案内 → お振込み → LINEで日程調整 → 90分の鑑定
 
@@ -1025,7 +1027,7 @@ Privacy
 
 利用しているサービス：
 
-・お申し込みフォーム（form.run）
+・お申し込みフォーム（Google Apps Script）
 
 ・LINE公式アカウント（LINEヤフー株式会社）
 
@@ -1226,7 +1228,7 @@ GTM・GA4の設定をGPTに依頼するときの指示は、次の内容でし�
 
 | 種類 | 内容 |
 |---|---|
-| 申し込み | https://form.run/@shukumeikantei |
+| 申し込み（フォーム） | https://script.google.com/macros/s/AKfycbxHHCUmc7vprxTk6W4Mibh43z3yQW3A4jnoGkwEH4gAZD3OU7RySPWGbzdpGq8atu2W/exec |
 | 公式LINE（無料相談） | https://lin.ee/RJBLLfK |
 | 動画：まるッとわかる算命学 | YouTube `z5rwWASzCSs`（算命学とはのページ） |
 | 動画：鑑定を受けた方が集まった会 | YouTube `GO0Uj0KrZ-s`（お客様の声のページ） |
@@ -1301,6 +1303,7 @@ GTM・GA4の設定をGPTに依頼するときの指示は、次の内容でし�
 | bc27795 | 2026-11-07 | Release: final publishable package (kagami-site.zip) |
 | d5d067e | 2026-11-07 | Add Google Tag Manager (GTM-PBH83M9S) to all pages and pass site events to dataLayer |
 | eb06647 | 2026-11-07 | Analytics: single GTM path (dataLayer events), remove direct gtag/GA4 sending, track real YouTube play/progress via IFrame API |
+| ded1b06 | 2026-11-07 | Add build record (Markdown + PDF): content, design, analytics, operations, history |
 
 ---
 

@@ -30,7 +30,7 @@
     var a = e.target.closest && e.target.closest("[data-cta]");
     if (!a) return;
     var href = a.getAttribute("href") || "";
-    var dest = href.indexOf("form.run") > -1 ? "form" : href.indexOf("lin.ee") > -1 ? "line" : /^https?:/.test(href) ? "external" : "internal";
+    var dest = (href.indexOf("script.google.com/macros") > -1 || href.indexOf("form.run") > -1) ? "form" : href.indexOf("lin.ee") > -1 ? "line" : /^https?:/.test(href) ? "external" : "internal";
     var loc = a.getAttribute("data-cta-loc") || "";
     track("cta_click", { cta_label: a.getAttribute("data-cta"), cta_location: loc, destination: dest });
     if (dest === "form") track("application_start", { source: "website", location: loc });
